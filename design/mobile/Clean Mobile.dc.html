@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#FFFDFB} a{color:#D4732A} a:hover{color:#B85F1F} [data-clean] [data-annot]{display:none}</style>
+</helmet>
+<div data-clean="true" data-screen-label="Clean mobile" style="width:390px;background:#FFFDFB;display:flex;flex-direction:column;font-family:'Open Sans',sans-serif;color:#1F1C18">
+  <div style="display:flex;justify-content:center;padding:14px 16px;border-bottom:1px solid #DDD6CC;background:#FFFFFF"><img src="https://cdn.shopify.com/s/files/1/1971/0317/files/cf-logo_x320.png?v=1691764950" alt="Club Furniture" style="display:block;flex:none;width:230px;height:48px;object-fit:contain"></div>
+  <dc-import name="TrustStrip" slider="{{ true }}" hint-size="100%,56px"></dc-import>
+  <div style="display:flex;flex-direction:column;gap:18px;padding:14px 16px;background:#F5F1EB;border-bottom:1px solid #DDD6CC">
+    <div onClick="{{ toggle }}" style="display:flex;justify-content:space-between;align-items:center;font-size:14px;cursor:pointer;min-height:24px">
+      <span style="display:flex;align-items:center;gap:6px;color:#D4732A;font-weight:600">
+        <sc-if value="{{ open }}" hint-placeholder-val="{{ false }}">Hide order summary<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4732A" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="m18 15-6-6-6 6"></path></svg></sc-if>
+        <sc-if value="{{ closed }}" hint-placeholder-val="{{ true }}">Show order summary<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4732A" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="m6 9 6 6 6-6"></path></svg></sc-if>
+      </span>
+      <strong style="font-size:20px">$3,379.99</strong>
+    </div>
+    <sc-if value="{{ open }}" hint-placeholder-val="{{ false }}">
+      <dc-import name="OrderSummary" monthly="{{ monthly }}" show-upsell="{{ showProtectionUpsell }}" rating="{{ rating }}" review-count="{{ reviewCount }}" hint-size="358px,1100px"></dc-import>
+    </sc-if>
+  </div>
+  <div style="padding:22px 16px 40px"><dc-import name="CheckoutMain" trust-slider="{{ true }}" monthly="{{ monthly }}" swatch-variant="{{ swatchVariant }}" timeline-state="{{ timelineState }}" hint-size="358px,3000px"></dc-import></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390},&quot;summaryExpanded&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;},&quot;swatchVariant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;v2&quot;,&quot;options&quot;:[&quot;v1&quot;,&quot;v2&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;timelineState&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;after&quot;,&quot;options&quot;:[&quot;after&quot;,&quot;before&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;showProtectionUpsell&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;},&quot;financingApr&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:36,&quot;step&quot;:1,&quot;unit&quot;:&quot;%&quot;,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  state = { open: null };
+  renderVals() {
+    const p = this.props, total = 3379.99;
+    const n = Number(p.financingMonths ?? 36), r = Number(p.financingApr ?? 0) / 1200;
+    const pmt = r === 0 ? total / n : total * r / (1 - Math.pow(1 + r, -n));
+    const open = this.state.open ?? (p.summaryExpanded ?? false);
+    return {
+      open, closed: !open,
+      toggle: () => this.setState({ open: !open }),
+      monthly: '$' + Math.round(pmt),
+      showProtectionUpsell: p.showProtectionUpsell ?? false,
+      swatchVariant: p.swatchVariant ?? 'v2', timelineState: p.timelineState ?? 'after',
+      rating: p.rating ?? '4.7', reviewCount: p.reviewCount ?? '30,000+'
+    };
+  }
+}
+</script>
+</body>
+</html>

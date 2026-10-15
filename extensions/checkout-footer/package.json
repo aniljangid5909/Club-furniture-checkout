@@ -1,0 +1,11 @@
+{
+  "name": "checkout-footer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Trust Guard banner + help line + tagline — purchase.checkout.footer.render-after",
+  "dependencies": {
+    "@shopify/ui-extensions": "~2026.7.0",
+    "preact": "^10.20.0",
+    "@preact/signals": "^2.0.0"
+  }
+}

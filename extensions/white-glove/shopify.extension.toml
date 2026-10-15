@@ -1,0 +1,11 @@
+api_version = "2026-07"
+
+[[extensions]]
+type = "ui_extension"
+name = "White-Glove delivery card"
+handle = "white-glove"
+uid = "2f875bd0-062c-44d8-a137-33adde0be78d"
+
+  [[extensions.targeting]]
+  target = "purchase.checkout.shipping-option-list.render-after"
+  module = "./src/WhiteGloveCard.tsx"

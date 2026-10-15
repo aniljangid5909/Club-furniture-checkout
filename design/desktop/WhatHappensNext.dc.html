@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</helmet>
+<div style="display:flex;flex-direction:column;gap:14px;padding:16px;border:1px solid #DDD6CC;border-radius:6px;background:#FFFFFF;font-family:'Open Sans',sans-serif;color:#1F1C18;font-size:14px;line-height:1.45">
+  <div style="display:flex;flex-direction:column;gap:4px">
+    <div style="font:700 16px/1.3 'Open Sans',sans-serif">What happens next</div>
+    <sc-if value="{{ hasDate }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;color:#6B665E"><span>Estimated delivery: <strong style="color:#1F1C18">{{ deliveryWindow }}</strong></span><span data-annot="1" style="font:500 9px/1 ui-monospace,Menlo,monospace;color:#8A6D3B">from product lead time</span></div>
+    </sc-if>
+    <sc-if value="{{ noDate }}" hint-placeholder-val="{{ false }}">
+      <div style="color:#6B665E">Enter your address to see your estimated delivery date.</div>
+    </sc-if>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:10px">
+    <div style="display:flex;align-items:center;gap:10px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B665E" style="flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="10"></circle></svg><span style="flex:1">Place your order</span><span data-annot="1" style="font:500 9px/1 ui-monospace,Menlo,monospace;color:#8A6D3B">circle (neutral)</span></div>
+    <sc-if value="{{ showSwatch }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;align-items:center;gap:10px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B665E" style="flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="10"></circle><path d="M12 7v5l3 2"></path></svg><span style="flex:1">Swatch kit mailed to you</span><span data-annot="1" style="font:500 9px/1 ui-monospace,Menlo,monospace;color:#8A6D3B">clock</span></div>
+    </sc-if>
+    <div style="display:flex;align-items:center;gap:10px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B665E" style="flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="10"></circle><path d="M12 7v5l3 2"></path></svg><span style="flex:1">You confirm your fabric</span><span data-annot="1" style="font:500 9px/1 ui-monospace,Menlo,monospace;color:#8A6D3B">clock</span></div>
+    <div style="display:flex;align-items:center;gap:10px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B665E" style="flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="10"></circle><path d="M12 7v5l3 2"></path></svg><span style="flex:1">Handcrafted <span style="color:#6B665E">· {{ buildWeeks }} weeks</span></span><span data-annot="1" style="font:500 9px/1 ui-monospace,Menlo,monospace;color:#8A6D3B">clock</span></div>
+    <div style="display:flex;align-items:center;gap:10px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B665E" style="flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="10"></circle><path d="M12 7v5l3 2"></path></svg><span style="flex:1">White-Glove delivery &amp; setup</span><span data-annot="1" style="font:500 9px/1 ui-monospace,Menlo,monospace;color:#8A6D3B">clock</span></div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props, before = (p.timelineState ?? 'after') === 'before';
+    return {
+      hasDate: !before, noDate: before, showSwatch: p.showSwatch ?? true,
+      deliveryWindow: p.deliveryWindow ?? 'Nov 12 – Nov 26', buildWeeks: p.buildWeeks ?? '4–6'
+    };
+  }
+}
+</script>
+</body>
+</html>

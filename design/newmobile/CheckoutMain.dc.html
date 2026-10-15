@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</helmet>
+<div ref="{{ rootRef }}" style="position:relative;display:flex;flex-direction:column;gap:30px;font-family:'Open Sans',sans-serif;color:#1F1C18;font-size:14px;line-height:1.45">
+
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <span data-annot="1" style="align-self:flex-start;font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#6B665E;background:#EDEAE4;border-radius:3px;padding:4px 6px">NATIVE · Express checkout · native, representation only</span>
+    <div style="text-align:center;color:#6B665E">Express checkout</div>
+    <div style="height:48px;border-radius:6px;background:#FFC439;display:flex;align-items:center;justify-content:center"><svg aria-label="PayPal" viewBox="0 0 101 32" width="76" height="24"><path fill="#003087" d="M12.24 2.8h-7.8c-.5 0-1 .4-1.1.9l-3.1 20c-.1.4.2.7.6.7h3.7c.5 0 1-.4 1.1-.9l.8-5.4c.1-.5.5-.9 1.1-.9h2.5c5.1 0 8.1-2.5 8.9-7.4.3-2.1 0-3.8-1-5-1.1-1.3-3.1-2-5.7-2Zm.9 7.3c-.4 2.8-2.6 2.8-4.6 2.8h-1.2l.8-5.2c0-.3.3-.5.6-.5h.5c1.4 0 2.7 0 3.4.8.5.4.7 1.1.5 2.1Zm22.3-.1h-3.7c-.3 0-.6.2-.6.5l-.2 1-.3-.4c-.8-1.2-2.6-1.6-4.4-1.6-4.1 0-7.6 3.1-8.3 7.5-.4 2.2.1 4.3 1.4 5.7 1.1 1.3 2.8 1.9 4.7 1.9 3.3 0 5.2-2.1 5.2-2.1l-.2 1c-.1.4.2.8.6.8h3.4c.5 0 1-.4 1.1-.9l2-12.8c.1-.2-.3-.6-.7-.6Zm-5.1 7.2c-.4 2.1-2 3.6-4.2 3.6-1.1 0-1.9-.3-2.5-1-.6-.7-.8-1.6-.6-2.6a4.2 4.2 0 0 1 4.2-3.6c1.1 0 1.9.4 2.5 1 .5.7.7 1.6.6 2.6Zm25-7.2h-3.7c-.4 0-.7.2-.9.5l-5.2 7.6-2.2-7.3c-.1-.5-.6-.8-1-.8h-3.7c-.4 0-.8.4-.6.9l4.1 12.1-3.9 5.4c-.3.4 0 1 .5 1h3.7c.4 0 .7-.2.9-.5l12.5-18c.3-.3 0-.9-.5-.9Z"></path><path fill="#009CDE" d="M67.74 2.8h-7.8c-.5 0-1 .4-1.1.9l-3.1 19.9c-.1.4.2.7.6.7h4c.4 0 .7-.3.7-.6l.9-5.7c.1-.5.5-.9 1.1-.9h2.5c5.1 0 8.1-2.5 8.9-7.4.3-2.1 0-3.8-1-5-1.2-1.2-3.1-1.9-5.7-1.9Zm.9 7.3c-.4 2.8-2.6 2.8-4.6 2.8h-1.2l.8-5.2c0-.3.3-.5.6-.5h.5c1.4 0 2.7 0 3.4.8.5.4.6 1.1.5 2.1Zm22.3-.1h-3.7c-.3 0-.6.2-.6.5l-.2 1-.3-.4c-.8-1.2-2.6-1.6-4.4-1.6-4.1 0-7.6 3.1-8.3 7.5-.4 2.2.1 4.3 1.4 5.7 1.1 1.3 2.8 1.9 4.7 1.9 3.3 0 5.2-2.1 5.2-2.1l-.2 1c-.1.4.2.8.6.8h3.4c.5 0 1-.4 1.1-.9l2-12.8c0-.2-.3-.6-.7-.6Zm-5.2 7.2c-.4 2.1-2 3.6-4.2 3.6-1.1 0-1.9-.3-2.5-1-.6-.7-.8-1.6-.6-2.6a4.2 4.2 0 0 1 4.2-3.6c1.1 0 1.9.4 2.5 1 .6.7.8 1.6.6 2.6Zm9.6-13.9-3.2 20.3c-.1.4.2.7.6.7h3.2c.5 0 1-.4 1.1-.9l3.2-19.9c.1-.4-.2-.7-.6-.7h-3.6c-.4 0-.6.2-.7.5Z"></path></svg></div>
+    <div style="display:flex;align-items:center;gap:12px;color:#6B665E;text-align:center"><div style="flex:1;min-width:24px;height:1px;background:#DDD6CC"></div><span>Or checkout using Visa, MasterCard, American Express or Discover</span><div style="flex:1;min-width:24px;height:1px;background:#DDD6CC"></div></div>
+    <span data-annot="1" style="align-self:center;font:600 9px/1 ui-monospace,Menlo,monospace;color:#5B4B8A;background:#ECE7F5;border-radius:3px;padding:3px 4px">checkout language editor</span>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <span data-annot="1" style="align-self:flex-start;font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#6B665E;background:#EDEAE4;border-radius:3px;padding:4px 6px">NATIVE · Contact</span>
+    <h2 style="margin:0;font:700 20px/1.25 'Open Sans',sans-serif">Contact</h2>
+    <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;flex-direction:column;justify-content:center;padding:0 14px"><span style="font-size:12px;color:#6B665E">Email</span><span>anil786py@gmail.com</span></div>
+    <dc-import name="SwatchOptIn" variant="{{ swatchVariant }}" checked="{{ swatchOn }}" on-toggle="{{ toggleSwatch }}" hint-size="100%,110px"></dc-import>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center"><span data-annot="1" style="font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#6B665E;background:#EDEAE4;border-radius:3px;padding:4px 6px">NATIVE · Delivery address</span><span data-annot="1" style="font:600 9px/1 ui-monospace,Menlo,monospace;color:#5B4B8A;background:#ECE7F5;border-radius:3px;padding:3px 4px">heading: checkout language editor</span></div>
+    <h2 style="margin:0;font:700 20px/1.25 'Open Sans',sans-serif">Ship To Address</h2>
+    <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;flex-direction:column;justify-content:center;padding:0 14px"><span style="font-size:12px;color:#6B665E">Country/Region</span><span>United States</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">First name</div>
+      <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">Last name</div>
+    </div>
+    <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">Address</div>
+    <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">Apartment, suite, etc. (optional)</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+      <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">City</div>
+      <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">State</div>
+      <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">ZIP code</div>
+    </div>
+    <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">Phone</div>
+    <label style="display:flex;align-items:center;gap:10px"><span style="width:18px;height:18px;box-sizing:border-box;border-radius:4px;border:1px solid #CFC6B9;background:#FFFFFF"></span>Save this information for next time</label>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <span data-annot="1" style="align-self:flex-start;font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#6B665E;background:#EDEAE4;border-radius:3px;padding:4px 6px">NATIVE · Shipping method</span>
+    <h2 style="margin:0;font:700 20px/1.25 'Open Sans',sans-serif">Shipping Method</h2>
+    <sc-if value="{{ addressEntered }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;align-items:center;gap:12px;padding:12px 14px;min-height:56px;box-sizing:border-box;border:1px solid #D4732A;border-radius:6px;background:#FDF5EE">
+        <span style="flex:none;width:18px;height:18px;border-radius:50%;border:6px solid #D4732A;background:#FFFFFF;box-sizing:border-box"></span>
+        <span style="flex:1">FREE Shipping + FREE In-Home Delivery Included</span><span style="font-weight:700">FREE</span>
+      </div>
+      <span data-annot="1" style="align-self:flex-start;font:600 9px/1 ui-monospace,Menlo,monospace;color:#5B4B8A;background:#ECE7F5;border-radius:3px;padding:3px 4px">rate name set in Shopify shipping settings</span>
+    </sc-if>
+    <sc-if value="{{ noAddress }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:16px;border-radius:6px;background:#F5F1EB;text-align:center;color:#6B665E">Enter your shipping address to view available shipping methods.</div>
+    </sc-if>
+  </div>
+
+  <div style="display:flex;flex-direction:column;margin-top:-14px">
+    <dc-import name="WhiteGloveCard" hint-size="100%,230px"></dc-import>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:6px">
+    <span data-annot="1" style="align-self:flex-start;font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#6B665E;background:#EDEAE4;border-radius:3px;padding:4px 6px;margin-bottom:6px">NATIVE · Payment heading</span>
+    <h2 style="margin:0;font:700 20px/1.25 'Open Sans',sans-serif">Payment</h2>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:10px;margin-top:-18px">
+    <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center"><span data-annot="1" style="font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#8A6D3B;background:#F6EBDD;border-radius:3px;padding:4px 6px">EXTENSION · payment-method-list.render-before · InlineStack + Icon + Text + Button → Modal</span><span data-annot="1" style="font:600 9px/1 ui-monospace,Menlo,monospace;color:#5B4B8A;background:#ECE7F5;border-radius:3px;padding:3px 4px">native subtitle text set via checkout language editor; icons need extension</span></div>
+    <div style="display:flex;align-items:flex-start;gap:8px;color:#1F1C18">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#55AA33" style="flex:none;margin-top:2px;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
+      <span data-annot="1" style="font:500 9px/1 ui-monospace,Menlo,monospace;color:#8A6D3B;margin-top:4px">lock</span>
+      <span style="flex:1">All transactions are SSL secure and encrypted. Your credit card is not charged today, it's only "authorized" when you checkout. <button onClick="{{ togglePayment }}" aria-label="About payment security" style="all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:3px;padding:2px;border-radius:4px;vertical-align:-3px" style-hover="background:#EDEAE4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B665E" style="stroke-width:2;stroke-linecap:round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4M12 8h.01"></path></svg><span data-annot="1" style="font:500 9px/1 ui-monospace,Menlo,monospace;color:#8A6D3B">info</span></button></span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;padding:12px 14px;border-radius:6px;background:#F5F1EB">
+      <div style="display:flex;align-items:flex-start;gap:10px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4732A" style="flex:none;margin-top:2px;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg>
+        <span style="flex:1">Or pay as low as <strong>{{ monthly }}/mo</strong> with Affirm. Choose Affirm below.</span>
+        <span data-annot="1" style="font:500 9px/1 ui-monospace,Menlo,monospace;color:#8A6D3B;margin-top:4px">credit-card</span>
+      </div>
+      <div style="padding-left:26px;font-size:12px;color:#6B665E">Rates from 0–36% APR. Payment options through Affirm are subject to eligibility, may not be available in all states, and require a down payment. Affirm Loan Services, LLC, NMLS ID 1883174. affirm.com/licenses <span data-annot="1" style="font:700 9px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#FFFFFF;background:#D4732A;border-radius:3px;padding:3px 4px;vertical-align:1px">CONFIRM</span> <span data-annot="1" style="font:500 9px/1 ui-monospace,Menlo,monospace;color:#8A6D3B">confirm with Affirm marketing compliance</span></div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <span data-annot="1" style="align-self:flex-start;font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#6B665E;background:#EDEAE4;border-radius:3px;padding:4px 6px">NATIVE · Payment methods + card fields</span>
+    <div style="border:1px solid #DDD6CC;border-radius:6px;overflow:hidden;background:#FFFFFF">
+      <div style="display:flex;align-items:center;gap:12px;padding:0 14px;height:56px;border:1px solid #D4732A;border-radius:6px 6px 0 0;background:#FDF5EE;margin:-1px">
+        <span style="width:18px;height:18px;border-radius:50%;border:6px solid #D4732A;background:#FFFFFF;box-sizing:border-box"></span><span style="flex:1;font-weight:600">Credit card</span>
+        <span style="display:flex;gap:4px"><span style="width:34px;height:22px;border-radius:3px;background:#1A1F71"></span><span style="width:34px;height:22px;border-radius:3px;background:#EB001B"></span><span style="width:34px;height:22px;border-radius:3px;background:#2E77BC"></span><span style="width:34px;height:22px;border-radius:3px;background:#F58220"></span></span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;padding:16px;background:#F5F1EB">
+        <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">Card number</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">Expiration (MM / YY)</div>
+          <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">Security code</div>
+        </div>
+        <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">Name on card</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center">
+          <label style="display:flex;align-items:center;gap:10px"><span style="flex:none;width:18px;height:18px;box-sizing:border-box;border-radius:4px;border:1px solid #CFC6B9;background:#FFFFFF"></span>Use shipping address as billing address</label>
+          <span data-annot="1" style="font:700 9px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#FFFFFF;background:#D4732A;border-radius:3px;padding:3px 4px">CONFIRM</span><span data-annot="1" style="font:500 10px/1 ui-monospace,Menlo,monospace;color:#8A6D3B">native default: verify in build</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;padding-top:4px">
+          <div style="font-weight:700">Billing address</div>
+          <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;flex-direction:column;justify-content:center;padding:0 14px"><span style="font-size:12px;color:#6B665E">Country/Region</span><span>United States</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">First name</div>
+            <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">Last name</div>
+          </div>
+          <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">Address</div>
+          <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">Apartment, suite, etc. (optional)</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+            <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">City</div>
+            <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">State</div>
+            <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">ZIP code</div>
+          </div>
+          <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;align-items:center;padding:0 14px;color:#6B665E">Phone (optional)</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:0 14px;height:56px;border-top:1px solid #DDD6CC"><span style="width:18px;height:18px;border-radius:50%;border:1px solid #CFC6B9;box-sizing:border-box"></span><span style="flex:1">PayPal</span><svg aria-label="PayPal" viewBox="0 0 101 32" width="57" height="18"><path fill="#003087" d="M12.24 2.8h-7.8c-.5 0-1 .4-1.1.9l-3.1 20c-.1.4.2.7.6.7h3.7c.5 0 1-.4 1.1-.9l.8-5.4c.1-.5.5-.9 1.1-.9h2.5c5.1 0 8.1-2.5 8.9-7.4.3-2.1 0-3.8-1-5-1.1-1.3-3.1-2-5.7-2Zm.9 7.3c-.4 2.8-2.6 2.8-4.6 2.8h-1.2l.8-5.2c0-.3.3-.5.6-.5h.5c1.4 0 2.7 0 3.4.8.5.4.7 1.1.5 2.1Zm22.3-.1h-3.7c-.3 0-.6.2-.6.5l-.2 1-.3-.4c-.8-1.2-2.6-1.6-4.4-1.6-4.1 0-7.6 3.1-8.3 7.5-.4 2.2.1 4.3 1.4 5.7 1.1 1.3 2.8 1.9 4.7 1.9 3.3 0 5.2-2.1 5.2-2.1l-.2 1c-.1.4.2.8.6.8h3.4c.5 0 1-.4 1.1-.9l2-12.8c.1-.2-.3-.6-.7-.6Zm-5.1 7.2c-.4 2.1-2 3.6-4.2 3.6-1.1 0-1.9-.3-2.5-1-.6-.7-.8-1.6-.6-2.6a4.2 4.2 0 0 1 4.2-3.6c1.1 0 1.9.4 2.5 1 .5.7.7 1.6.6 2.6Zm25-7.2h-3.7c-.4 0-.7.2-.9.5l-5.2 7.6-2.2-7.3c-.1-.5-.6-.8-1-.8h-3.7c-.4 0-.8.4-.6.9l4.1 12.1-3.9 5.4c-.3.4 0 1 .5 1h3.7c.4 0 .7-.2.9-.5l12.5-18c.3-.3 0-.9-.5-.9Z"></path><path fill="#009CDE" d="M67.74 2.8h-7.8c-.5 0-1 .4-1.1.9l-3.1 19.9c-.1.4.2.7.6.7h4c.4 0 .7-.3.7-.6l.9-5.7c.1-.5.5-.9 1.1-.9h2.5c5.1 0 8.1-2.5 8.9-7.4.3-2.1 0-3.8-1-5-1.2-1.2-3.1-1.9-5.7-1.9Zm.9 7.3c-.4 2.8-2.6 2.8-4.6 2.8h-1.2l.8-5.2c0-.3.3-.5.6-.5h.5c1.4 0 2.7 0 3.4.8.5.4.6 1.1.5 2.1Zm22.3-.1h-3.7c-.3 0-.6.2-.6.5l-.2 1-.3-.4c-.8-1.2-2.6-1.6-4.4-1.6-4.1 0-7.6 3.1-8.3 7.5-.4 2.2.1 4.3 1.4 5.7 1.1 1.3 2.8 1.9 4.7 1.9 3.3 0 5.2-2.1 5.2-2.1l-.2 1c-.1.4.2.8.6.8h3.4c.5 0 1-.4 1.1-.9l2-12.8c0-.2-.3-.6-.7-.6Zm-5.2 7.2c-.4 2.1-2 3.6-4.2 3.6-1.1 0-1.9-.3-2.5-1-.6-.7-.8-1.6-.6-2.6a4.2 4.2 0 0 1 4.2-3.6c1.1 0 1.9.4 2.5 1 .6.7.8 1.6.6 2.6Zm9.6-13.9-3.2 20.3c-.1.4.2.7.6.7h3.2c.5 0 1-.4 1.1-.9l3.2-19.9c.1-.4-.2-.7-.6-.7h-3.6c-.4 0-.6.2-.7.5Z"></path></svg></div>
+      <div style="display:flex;align-items:center;gap:12px;padding:0 14px;height:56px;border-top:1px solid #DDD6CC"><span style="width:18px;height:18px;border-radius:50%;border:1px solid #CFC6B9;box-sizing:border-box"></span><span style="flex:1">Pay with Klarna</span><span style="font-size:12px;font-weight:700;color:#FFFFFF;background:#FFA8CD;border-radius:3px;padding:3px 6px">Klarna</span></div>
+      <div style="display:flex;align-items:center;gap:12px;padding:0 14px;height:56px;border-top:1px solid #DDD6CC"><span style="width:18px;height:18px;border-radius:50%;border:1px solid #CFC6B9;box-sizing:border-box"></span><span style="flex:1">Affirm — Pay over time</span><span style="font-size:12px;font-weight:700;color:#FFFFFF;background:#4A4AF4;border-radius:3px;padding:3px 6px">affirm</span></div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center"><span data-annot="1" style="font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#8A6D3B;background:#F6EBDD;border-radius:3px;padding:4px 6px">EXTENSION · actions.render-before · InlineStack + Icon + Text</span><span data-annot="1" style="font:500 10px/1 ui-monospace,Menlo,monospace;color:#8A6D3B">native button can't contain content; rendered via actions.render-before · Guarantees V1</span></div>
+    <sc-if value="{{ trustSlider }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;justify-content:center;align-items:center;min-height:22px;font-weight:600">
+      <sc-if value="{{ t0 }}" hint-placeholder-val="{{ true }}"><span style="display:inline-flex;align-items:center;gap:6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4732A" style="flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>SSL Secure Checkout</span></sc-if>
+      <sc-if value="{{ t1 }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4732A" style="flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M1 5h14v11H1zM15 9h4l4 4v3h-8z"></path><circle cx="5.5" cy="18.5" r="2"></circle><circle cx="18.5" cy="18.5" r="2"></circle></svg>FREE Shipping + FREE In-Home Delivery</span></sc-if>
+      <sc-if value="{{ t2 }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4732A" style="flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 7v6h6"></path><path d="M21 17a9 9 0 0 0-15-6.7L3 13"></path></svg>"Buy-It-Back" Guarantee</span></sc-if>
+    </div>
+    </sc-if>
+    <sc-if value="{{ trustStacked }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 22px;font-weight:600">
+      <span style="display:inline-flex;align-items:center;gap:6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4732A" style="flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>SSL Secure Checkout</span>
+      <span style="display:inline-flex;align-items:center;gap:6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4732A" style="flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M1 5h14v11H1zM15 9h4l4 4v3h-8z"></path><circle cx="5.5" cy="18.5" r="2"></circle><circle cx="18.5" cy="18.5" r="2"></circle></svg>FREE Shipping + FREE In-Home Delivery</span>
+      <span style="display:inline-flex;align-items:center;gap:6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4732A" style="flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 7v6h6"></path><path d="M21 17a9 9 0 0 0-15-6.7L3 13"></path></svg>"Buy-It-Back" Guarantee</span>
+    </div>
+    </sc-if>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:10px;margin-top:-14px">
+    <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center"><span data-annot="1" style="font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#6B665E;background:#EDEAE4;border-radius:3px;padding:4px 6px">NATIVE · Place order <span style="color:#5B4B8A">· BRANDING API: #55AA33, 72px, 20/700</span></span><span data-annot="1" style="font:600 9px/1 ui-monospace,Menlo,monospace;color:#5B4B8A;background:#ECE7F5;border-radius:3px;padding:3px 4px">label: checkout language editor</span></div>
+    <div style="height:72px;border-radius:6px;background:#55AA33;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700">Place Your Order Now!</div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding-top:6px">
+      <img src="https://cdn.shopify.com/s/files/1/1971/0317/files/trustguard-1.svg?v=1723493776" alt="Trust Guard Secured: This Website is Scanned Daily for your Protection" style="display:block;align-self:stretch;width:100%;height:auto">
+      <span data-annot="1" style="font:600 10px/1.3 ui-monospace,Menlo,monospace;color:#8A6D3B;background:#F6EBDD;border-radius:3px;padding:4px 6px;text-align:center">[Image] Trust Guard banner, current live asset, full button width · EXTENSION · Image · nearest slot is footer.render-after: verify</span>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:12px;padding-top:12px;border-top:1px solid #DDD6CC">
+    <span data-annot="1" style="align-self:flex-start;font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#6B665E;background:#EDEAE4;border-radius:3px;padding:4px 6px">NATIVE · Policies <span style="color:#8A6D3B">+ EXTENSION · footer.render-after · Text</span></span>
+    <div style="display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:#D4732A;text-decoration:underline"><span>Refund policy</span><span>Shipping</span><span>Privacy policy</span><span>Terms of service</span><span>Contact</span></div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center"><span data-annot="1" style="font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#8A6D3B;background:#F6EBDD;border-radius:3px;padding:4px 6px">EXTENSION · footer.render-after · InlineStack + Icon + Text + Link (tel:)</span></div>
+    <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;line-height:1.45;color:#6B665E">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B665E" style="flex:none;margin-top:2px;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M11 18h2"></path></svg>
+      <span style="flex:0 1 auto">Questions? Call Us, Toll Free: <a href="tel:18883788383" style="color:#1F1C18;font-weight:700">1-888-378-8383</a> · M-F 9AM - 5PM EST</span>
+    </div>
+  </div>
+  <sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeModal }}" style="position:absolute;top:{{ mTop }}px;left:{{ mLeft }}px;width:{{ mW }}px;height:{{ mH }}px;background:rgba(31,28,24,.45);z-index:50">
+      <div onClick="{{ stop }}" role="dialog" style="position:absolute;left:{{ mCx }}px;top:{{ mCy }}px;transform:translate(-50%,-50%);max-height:80%;overflow:auto;width:min(520px,calc(100% - 32px));box-sizing:border-box;background:#FFFFFF;border-radius:10px;padding:24px 28px;display:flex;flex-direction:column;gap:12px;font-family:'Open Sans',sans-serif;color:#1F1C18;font-size:16px;line-height:1.5;text-align:left;font-style:normal;font-weight:400">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px"><h3 style="margin:0;font:700 22px/1.25 'Open Sans',sans-serif">{{ modalTitle }}</h3><button onClick="{{ closeModal }}" aria-label="Close" style="all:unset;cursor:pointer;flex:none;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:6px;color:#6B665E" style-hover="background:#F5F1EB"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="stroke-width:2;stroke-linecap:round"><path d="M6 6l12 12M18 6 6 18"></path></svg></button></div>
+        <p style="margin:0">{{ modalBody }}</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span data-annot="1" style="font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#8A6D3B;background:#F6EBDD;border-radius:3px;padding:4px 6px">Modal (tap) · Button overlay → Modal</span></div>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: null, swatch: null, swatchFor: null, ti: 0 };
+  componentDidMount() { this.tt = setInterval(() => { if (this.props.trustSlider) this.setState(s => ({ ti: (s.ti + 1) % 3 })); }, 3500); }
+  componentWillUnmount() { clearInterval(this.tt); }
+  root = React.createRef();
+  modal(k) { return e => { const t = e.currentTarget, f = this.root.current, fr = f.getBoundingClientRect(), sc = fr.width / f.offsetWidth || 1, fe = t.closest('[data-screen-label]') || f, b = fe.getBoundingClientRect(), W = b.width / sc, H = b.height / sc, cl = (v, lo, hi) => Math.min(Math.max(v, lo), hi); const box = { mTop: (b.top - fr.top) / sc, mLeft: (b.left - fr.left) / sc, mW: W, mH: H, mCx: cl((window.innerWidth / 2 - b.left) / sc, Math.min(270, W / 2), Math.max(W / 2, W - 270)), mCy: cl((window.innerHeight / 2 - b.top) / sc, Math.min(160, H / 2), Math.max(H / 2, H - 160)) }; this.setState({ open: this.state.open === k ? null : k, ...box }); }; }
+  renderVals() {
+    const p = this.props, s = this.state;
+    const v = p.swatchVariant ?? 'v2';
+    const swatchOn = s.swatchFor === v ? s.swatch : true;
+    const before = (p.timelineState ?? 'after') === 'before';
+    const M = s.open === 'payment' ? { title: 'Secure Payment', body: 'Rest assured, your credit card and personal information are 100% encrypted and SSL secure. Your credit card will not be charged until your order has been confirmed over the phone after you receive your swatch kit in the mail (we only "authorize" your credit card when you checkout today).' } : null;
+    return {
+      trustSlider: !!p.trustSlider, trustStacked: !p.trustSlider, t0: s.ti === 0, t1: s.ti === 1, t2: s.ti === 2,
+      modalOpen: !!M, modalTitle: M?.title ?? '', modalBody: M?.body ?? '',
+      mTop: s.mTop ?? 0, mLeft: s.mLeft ?? 0, mW: s.mW ?? 0, mH: s.mH ?? 0, mCx: s.mCx ?? 0, mCy: s.mCy ?? 0, rootRef: this.root,
+      closeModal: () => this.setState({ open: null }), stop: e => e.stopPropagation(),
+      swatchVariant: v, swatchOn, toggleSwatch: () => this.setState({ swatch: !swatchOn, swatchFor: v }),
+      addressEntered: !before, noAddress: before,
+      monthly: p.monthly ?? '$94',
+      togglePayment: this.modal('payment')
+    };
+  }
+}
+</script>
+</body>
+</html>

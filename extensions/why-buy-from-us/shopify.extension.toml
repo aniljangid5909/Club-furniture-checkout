@@ -1,0 +1,37 @@
+api_version = "2026-07"
+
+[[extensions]]
+type = "ui_extension"
+name = "Order summary: Why Buy From Us"
+handle = "why-buy-from-us"
+uid = "7a83b403-4813-462d-8e48-e456e1066c8c"
+
+  [[extensions.targeting]]
+  target = "purchase.checkout.block.render"
+  module = "./src/WhyBuyFromUs.tsx"
+
+  [extensions.settings]
+
+    [[extensions.settings.fields]]
+    key = "rating"
+    type = "single_line_text_field"
+    name = "Star rating"
+    description = "Rating shown next to the stars. Default 4.7."
+
+    [[extensions.settings.fields]]
+    key = "customer_count"
+    type = "single_line_text_field"
+    name = "Customer count"
+    description = "Shown after the rating, e.g. '30,000+'. The word 'Satisfied Customers' is appended automatically."
+
+    [[extensions.settings.fields]]
+    key = "star_full_url"
+    type = "single_line_text_field"
+    name = "Full star image URL"
+    description = "Shopify Files URL of the yellow full-star image (16px). See extension README to upload the provided SVG. Falls back to a theme star icon if blank."
+
+    [[extensions.settings.fields]]
+    key = "star_half_url"
+    type = "single_line_text_field"
+    name = "Half star image URL"
+    description = "Shopify Files URL of the yellow half-star image (16px). Falls back to a theme star icon if blank."

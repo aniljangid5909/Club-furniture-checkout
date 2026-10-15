@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#E9E4DC} a{color:#D4732A} a:hover{color:#B85F1F} [data-clean] [data-annot]{display:none}</style>
+</helmet>
+
+<section style="display:flex;flex-direction:column;gap:56px;padding:48px;font-family:'Open Sans',sans-serif;color:#1F1C18">
+  <div data-clean="true" style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:center;gap:12px"><span style="font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">0a · CLEAN PREVIEW — DESKTOP 1440</span><span style="font-size:13px;color:#6B665E">No slot tags, icon names or CONFIRM markers. Tap the swatch or payment ⓘ to open its modal; use the arrows to page reviews.</span></div>
+    <div data-screen-label="Clean desktop" style="flex:none;width:1440px;background:#FFFDFB;box-shadow:0 10px 40px rgba(31,28,24,.12);display:flex;flex-direction:column">
+      <div style="display:flex;padding:22px 0 18px 160px;border-bottom:1px solid #DDD6CC;background:#FFFFFF"><img src="https://cdn.shopify.com/s/files/1/1971/0317/files/cf-logo_x320.png?v=1691764950" alt="Club Furniture" style="display:block;flex:none;width:346px;height:72px;object-fit:contain"></div>
+      <dc-import name="TrustStrip" hint-size="100%,48px"></dc-import>
+      <div style="display:grid;grid-template-columns:1fr 1fr">
+        <div style="display:flex;justify-content:flex-end;padding:40px 48px 60px 0"><div style="width:600px"><dc-import name="CheckoutMain" monthly="{{ monthly }}" swatch-variant="{{ swatchVariant }}" timeline-state="{{ timelineState }}" hint-size="600px,2800px"></dc-import></div></div>
+        <div style="background:#F5F1EB;border-left:1px solid #DDD6CC;padding:40px 0 60px 44px"><div style="width:440px"><dc-import name="OrderSummary" monthly="{{ monthly }}" show-upsell="{{ showProtectionUpsell }}" rating="{{ rating }}" review-count="{{ reviewCount }}" hint-size="440px,1000px"></dc-import></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:56px;padding:48px;font-family:'Open Sans',sans-serif;color:#1F1C18">
+  <div data-clean="true" style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:center;gap:12px"><span style="font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">0b · CLEAN PREVIEW — MOBILE 390</span></div>
+    <div data-screen-label="Clean mobile" style="flex:none;width:390px;background:#FFFDFB;box-shadow:0 10px 40px rgba(31,28,24,.12);display:flex;flex-direction:column">
+      <div style="display:flex;justify-content:center;padding:14px 16px;border-bottom:1px solid #DDD6CC;background:#FFFFFF"><img src="https://cdn.shopify.com/s/files/1/1971/0317/files/cf-logo_x320.png?v=1691764950" alt="Club Furniture" style="display:block;flex:none;width:230px;height:48px;object-fit:contain"></div>
+      <dc-import name="TrustStrip" hint-size="100%,72px"></dc-import>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:#F5F1EB;border-bottom:1px solid #DDD6CC;font-size:14px"><span style="display:flex;align-items:center;gap:6px;color:#D4732A;font-weight:600">Show order summary<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4732A" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="m6 9 6 6 6-6"></path></svg></span><strong style="font-size:20px">$3,379.99</strong></div>
+      <div style="padding:22px 16px 40px"><dc-import name="CheckoutMain" monthly="{{ monthly }}" swatch-variant="{{ swatchVariant }}" timeline-state="{{ timelineState }}" hint-size="358px,3000px"></dc-import></div>
+    </div>
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:56px;padding:48px;font-family:'Open Sans',sans-serif;color:#1F1C18">
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px"><span style="font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">1 · DESKTOP 1440</span><span style="font-size:13px;color:#6B665E;display:flex;flex-wrap:wrap;gap:6px;align-items:center">Tags: <span style="color:#6B665E;background:#EDEAE4;padding:2px 5px;border-radius:3px;font:600 10px ui-monospace,monospace">NATIVE</span><span style="color:#5B4B8A;background:#ECE7F5;padding:2px 5px;border-radius:3px;font:600 10px ui-monospace,monospace">BRANDING API / checkout language editor</span><span style="color:#8A6D3B;background:#F6EBDD;padding:2px 5px;border-radius:3px;font:600 10px ui-monospace,monospace">EXTENSION · slot · components</span><span style="font:700 9px/1 ui-monospace,monospace;color:#FFFFFF;background:#D4732A;border-radius:3px;padding:3px 4px">CONFIRM</span> unverified · <span style="font:500 9px ui-monospace,monospace;color:#8A6D3B">lock</span> Shopify icon name · only the swatch and payment ⓘ open a Modal</span></div>
+    <div data-screen-label="Desktop" style="flex:none;width:1440px;background:#FFFDFB;box-shadow:0 10px 40px rgba(31,28,24,.12);display:flex;flex-direction:column">
+      <div style="display:flex;flex-direction:column;gap:8px;padding:22px 0 18px 160px;border-bottom:1px solid #DDD6CC;background:#FFFFFF">
+        <span style="align-self:flex-start;font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#5B4B8A;background:#ECE7F5;border-radius:3px;padding:4px 6px">BRANDING API · header logo, left-aligned</span>
+        <img src="https://cdn.shopify.com/s/files/1/1971/0317/files/cf-logo_x320.png?v=1691764950" alt="Club Furniture — luxurious home furnishings for less" style="display:block;align-self:flex-start;width:346px;height:72px;object-fit:contain">
+      </div>
+      <dc-import name="TrustStrip" hint-size="100%,60px"></dc-import>
+      <div style="display:grid;grid-template-columns:1fr 1fr">
+        <div style="display:flex;justify-content:flex-end;padding:40px 48px 60px 0"><div style="width:600px"><dc-import name="CheckoutMain" monthly="{{ monthly }}" swatch-variant="{{ swatchVariant }}" timeline-state="{{ timelineState }}" hint-size="600px,3000px"></dc-import></div></div>
+        <div style="background:#F5F1EB;border-left:1px solid #DDD6CC;padding:40px 0 60px 44px"><div style="width:440px"><dc-import name="OrderSummary" monthly="{{ monthly }}" show-upsell="{{ showProtectionUpsell }}" rating="{{ rating }}" review-count="{{ reviewCount }}" hint-size="440px,1100px"></dc-import></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:56px;padding:48px;font-family:'Open Sans',sans-serif;color:#1F1C18">
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:center;gap:12px"><span style="font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">2 · MOBILE 390</span><span style="font-size:13px;color:#6B665E">Left: order summary collapsed · Right: expanded. Trust strip sits above the summary toggle.</span></div>
+    <div style="display:flex;gap:40px;align-items:flex-start">
+      <div data-screen-label="Mobile collapsed" style="flex:none;width:390px;background:#FFFDFB;box-shadow:0 10px 40px rgba(31,28,24,.12);display:flex;flex-direction:column">
+        <div style="display:flex;justify-content:center;padding:14px 16px;border-bottom:1px solid #DDD6CC;background:#FFFFFF"><img src="https://cdn.shopify.com/s/files/1/1971/0317/files/cf-logo_x320.png?v=1691764950" alt="Club Furniture" style="display:block;flex:none;width:230px;height:48px;object-fit:contain"></div>
+        <dc-import name="TrustStrip" show-mobile-note="{{ true }}" hint-size="100%,96px"></dc-import>
+        <div style="display:flex;flex-direction:column;gap:8px;padding:14px 16px;background:#F5F1EB;border-bottom:1px solid #DDD6CC">
+          <span style="align-self:flex-start;font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#6B665E;background:#EDEAE4;border-radius:3px;padding:4px 6px">NATIVE · Collapsed order summary</span>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:14px"><span style="display:flex;align-items:center;gap:6px;color:#D4732A;font-weight:600">Show order summary<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4732A" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="m6 9 6 6 6-6"></path></svg></span><strong style="font-size:20px">$3,379.99</strong></div>
+        </div>
+        <div style="padding:22px 16px 40px"><dc-import name="CheckoutMain" monthly="{{ monthly }}" swatch-variant="{{ swatchVariant }}" timeline-state="{{ timelineState }}" hint-size="358px,3200px"></dc-import></div>
+      </div>
+      <div data-screen-label="Mobile expanded summary" style="flex:none;width:390px;background:#FFFDFB;box-shadow:0 10px 40px rgba(31,28,24,.12);display:flex;flex-direction:column">
+        <div style="display:flex;justify-content:center;padding:14px 16px;border-bottom:1px solid #DDD6CC;background:#FFFFFF"><img src="https://cdn.shopify.com/s/files/1/1971/0317/files/cf-logo_x320.png?v=1691764950" alt="Club Furniture" style="display:block;flex:none;width:230px;height:48px;object-fit:contain"></div>
+        <dc-import name="TrustStrip" show-mobile-note="{{ true }}" hint-size="100%,96px"></dc-import>
+        <div style="display:flex;flex-direction:column;gap:18px;padding:14px 16px 22px;background:#F5F1EB;border-bottom:1px solid #DDD6CC">
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:14px"><span style="display:flex;align-items:center;gap:6px;color:#D4732A;font-weight:600">Hide order summary<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4732A" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="m18 15-6-6-6 6"></path></svg></span><strong style="font-size:20px">$3,379.99</strong></div>
+          <dc-import name="OrderSummary" monthly="{{ monthly }}" show-upsell="{{ showProtectionUpsell }}" rating="{{ rating }}" review-count="{{ reviewCount }}" hint-size="358px,1100px"></dc-import>
+        </div>
+        <div style="padding:22px 16px;font-size:12px;color:#6B665E;text-align:center">Checkout continues below (same as left frame)</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <span style="align-self:flex-start;font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">2b · MOBILE: STRIP BELOW SUMMARY BAR</span>
+    <div data-screen-label="Mobile: strip below summary bar" style="flex:none;width:390px;background:#FFFDFB;box-shadow:0 10px 40px rgba(31,28,24,.12);display:flex;flex-direction:column">
+      <div style="display:flex;justify-content:center;padding:14px 16px;border-bottom:1px solid #DDD6CC;background:#FFFFFF"><img src="https://cdn.shopify.com/s/files/1/1971/0317/files/cf-logo_x320.png?v=1691764950" alt="Club Furniture" style="display:block;flex:none;width:230px;height:48px;object-fit:contain"></div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding:14px 16px;background:#F5F1EB;border-bottom:1px solid #DDD6CC">
+        <span style="align-self:flex-start;font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#6B665E;background:#EDEAE4;border-radius:3px;padding:4px 6px">NATIVE · Collapsed order summary</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:14px"><span style="display:flex;align-items:center;gap:6px;color:#D4732A;font-weight:600">Show order summary<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4732A" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="m6 9 6 6 6-6"></path></svg></span><strong style="font-size:20px">$3,379.99</strong></div>
+      </div>
+      <dc-import name="TrustStrip" show-mobile-note="{{ true }}" hint-size="100%,96px"></dc-import>
+      <div style="padding:22px 16px;font-size:12px;color:#6B665E;text-align:center">Express checkout and the rest follow (same as frame 2)</div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px"><span style="font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">3 · GUARANTEES: V1 vs V2</span><span style="font-size:13px;color:#6B665E">No borders, no popups. V1 is used in the main mockups.</span><span style="font:600 10px/1 ui-monospace,Menlo,monospace;color:#8A6D3B;background:#F6EBDD;border-radius:3px;padding:4px 6px">EXTENSION · actions.render-before · native button can't contain content; rendered via actions.render-before</span></div>
+    <div data-screen-label="Guarantees V1 vs V2" style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
+      <div style="width:600px;padding:24px;box-sizing:border-box;background:#FFFDFB;border-radius:8px;display:flex;flex-direction:column;gap:14px;font-size:14px;line-height:1.45">
+        <span style="align-self:flex-start;font:700 11px/1 ui-monospace,Menlo,monospace;color:#1F1C18">V1 · same 3 items as header trust strip · inline row</span>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 22px;font-weight:600">
+          <span style="display:inline-flex;align-items:center;gap:6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4732A" style="flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>SSL Secure Checkout</span>
+          <span style="display:inline-flex;align-items:center;gap:6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4732A" style="flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M1 5h14v11H1zM15 9h4l4 4v3h-8z"></path><circle cx="5.5" cy="18.5" r="2"></circle><circle cx="18.5" cy="18.5" r="2"></circle></svg>FREE Shipping + FREE In-Home Delivery</span>
+          <span style="display:inline-flex;align-items:center;gap:6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4732A" style="flex:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 7v6h6"></path><path d="M21 17a9 9 0 0 0-15-6.7L3 13"></path></svg>"Buy-It-Back" Guarantee</span>
+        </div>
+        <div style="height:72px;border-radius:6px;background:#55AA33;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700">Place Your Order Now!</div>
+      </div>
+      <div style="width:600px;padding:24px;box-sizing:border-box;background:#FFFDFB;border-radius:8px;display:flex;flex-direction:column;gap:14px;font-size:14px;line-height:1.45">
+        <span style="align-self:flex-start;font:700 11px/1 ui-monospace,Menlo,monospace;color:#1F1C18">V2 · matches the Add to Cart button · 2×2 checkmarks</span>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 20px;font-weight:600;padding:0 8px">
+          <span style="display:flex;align-items:center;gap:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#55AA33" style="flex:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><path d="M20 6 9 17l-5-5"></path></svg>FREE Shipping</span>
+          <span style="display:flex;align-items:center;gap:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#55AA33" style="flex:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><path d="M20 6 9 17l-5-5"></path></svg>FREE In-Home Delivery</span>
+          <span style="display:flex;align-items:center;gap:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#55AA33" style="flex:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><path d="M20 6 9 17l-5-5"></path></svg>Style, Comfort &amp; Quality</span>
+          <span style="display:flex;align-items:center;gap:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#55AA33" style="flex:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><path d="M20 6 9 17l-5-5"></path></svg>"Buy-It-Back" Guarantee</span>
+        </div>
+        <div style="height:72px;border-radius:6px;background:#55AA33;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700">Place Your Order Now!</div>
+        <span style="font:500 9px/1 ui-monospace,Menlo,monospace;color:#8A6D3B">checkmark (success tone #55AA33)</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:56px;flex-wrap:wrap;align-items:flex-start">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="align-self:flex-start;font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">4 · SWATCH V1 vs V2 (both checked by default)</span>
+      <div data-screen-label="Swatch V1 vs V2" style="display:flex;gap:20px;align-items:flex-start">
+        <div style="width:380px;padding:20px;box-sizing:border-box;background:#FFFDFB;border-radius:8px;display:flex;flex-direction:column;gap:12px">
+          <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;flex-direction:column;justify-content:center;padding:0 14px;font-size:14px"><span style="font-size:12px;color:#6B665E">Email</span><span>anil786py@gmail.com</span></div>
+          <dc-import name="SwatchOptIn" variant="v1" hint-size="100%,200px"></dc-import>
+        </div>
+        <div style="width:380px;padding:20px;box-sizing:border-box;background:#FFFDFB;border-radius:8px;display:flex;flex-direction:column;gap:12px">
+          <div style="height:52px;border:1px solid #CFC6B9;border-radius:6px;background:#FFFFFF;display:flex;flex-direction:column;justify-content:center;padding:0 14px;font-size:14px"><span style="font-size:12px;color:#6B665E">Email</span><span>anil786py@gmail.com</span></div>
+          <dc-import name="SwatchOptIn" variant="v2" hint-size="100%,160px"></dc-import>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="align-self:flex-start;font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">4b · MODALS: SWATCH + PAYMENT (the only two kept)</span>
+      <div data-screen-label="Modals" style="display:flex;gap:20px;align-items:flex-start;padding:24px;background:rgba(31,28,24,.45);border-radius:8px">
+        <div style="width:400px;box-sizing:border-box;background:#FFFFFF;border-radius:10px;padding:24px 28px;display:flex;flex-direction:column;gap:12px;font-size:16px;line-height:1.5">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px"><h3 style="margin:0;font:700 22px/1.25 'Open Sans',sans-serif">FREE Swatch Kit</h3><span style="flex:none;width:32px;height:32px;display:flex;align-items:center;justify-content:center;color:#6B665E"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="stroke-width:2;stroke-linecap:round"><path d="M6 6l12 12M18 6 6 18"></path></svg></span></div>
+          <p style="margin:0">Once you checkout online, we'll automatically Priority Mail you a complete kit of fabric and/or leather swatches that are available on the furniture item(s) you've ordered. Once you receive your swatch kit you can easily confirm, edit, totally change or even cancel your order with no penalty.</p>
+          <span style="align-self:flex-start;font:600 10px/1 ui-monospace,Menlo,monospace;color:#8A6D3B;background:#F6EBDD;border-radius:3px;padding:4px 6px">Opened from swatch ⓘ · Modal</span>
+        </div>
+        <div style="width:400px;box-sizing:border-box;background:#FFFFFF;border-radius:10px;padding:24px 28px;display:flex;flex-direction:column;gap:12px;font-size:16px;line-height:1.5">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px"><h3 style="margin:0;font:700 22px/1.25 'Open Sans',sans-serif">Secure Payment</h3><span style="flex:none;width:32px;height:32px;display:flex;align-items:center;justify-content:center;color:#6B665E"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="stroke-width:2;stroke-linecap:round"><path d="M6 6l12 12M18 6 6 18"></path></svg></span></div>
+          <p style="margin:0">Rest assured, your credit card and personal information are 100% encrypted and SSL secure. Your credit card will not be charged until your order has been confirmed over the phone after you receive your swatch kit in the mail (we only "authorize" your credit card when you checkout today).</p>
+          <span style="align-self:flex-start;font:600 10px/1 ui-monospace,Menlo,monospace;color:#8A6D3B;background:#F6EBDD;border-radius:3px;padding:4px 6px">Opened from payment-line ⓘ · Modal</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:56px;flex-wrap:wrap;align-items:flex-start">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="align-self:flex-start;font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">4c · WHITE-GLOVE CARD (collapsed only · R5)</span>
+      <div data-screen-label="White-Glove card" style="width:600px;padding:24px;box-sizing:border-box;background:#FFFDFB;border-radius:8px"><dc-import name="WhiteGloveCard" hint-size="100%,230px"></dc-import></div>
+      <span style="font-size:13px;color:#6B665E">Disclosure link and Expanded variant removed (#49).</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="align-self:flex-start;font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">4e · SUMMARY SHIPPING: CLIENT REQUEST</span>
+      <div data-screen-label="Summary shipping: client request" style="width:440px;padding:24px;box-sizing:border-box;background:#F5F1EB;border-radius:8px;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.45">
+        <div style="display:flex;justify-content:space-between"><span>Subtotal</span><span>$3,529.99</span></div>
+        <div style="display:flex;justify-content:space-between"><span>Order discount <span style="color:#6B665E">· CF150EXIT</span></span><span>− $150.00</span></div>
+        <div style="display:flex;justify-content:space-between;gap:12px"><span>FREE Shipping + FREE In-Home Delivery</span><span style="font-weight:700">FREE</span></div>
+        <span style="align-self:flex-start;font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;border-radius:3px;padding:4px 6px;color:#6B665E;background:#EDEAE4;line-height:1.4">NATIVE: label via checkout language editor, verify; value set by Shopify</span>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding-top:6px"><span style="font:700 20px/1 'Open Sans',sans-serif">Total</span><span><span style="font-size:12px;color:#6B665E;margin-right:6px">USD</span><strong style="font-size:20px">$3,379.99</strong></span></div>
+      </div>
+      <span style="max-width:440px;font-size:13px;color:#6B665E">Shown after an address is entered (#27). Main mockups keep "Enter shipping address" before an address exists.</span>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px"><span style="font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">4d · REVIEW CAROUSEL: 5 STATES (no dates)</span><span style="font-size:13px;color:#6B665E">Name + state only. No dates shown (client decision). Manual, no autoplay.</span></div>
+    <div data-screen-label="Review carousel" style="display:flex;gap:20px;flex-wrap:wrap;align-items:stretch">
+      <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="5">
+        <div style="width:300px;display:flex;flex-direction:column;gap:8px">
+          <span style="font:600 10px/1 ui-monospace,Menlo,monospace;color:#6B665E">{{ r.state }}</span>
+          <div style="flex:1;display:flex;flex-direction:column;gap:12px;padding:16px;box-sizing:border-box;border:1px solid #DDD6CC;border-radius:6px;background:#FFFFFF;font-size:14px;line-height:1.45">
+            <div style="flex:1">“{{ r.text }}”</div>
+            <strong style="font-size:12px">{{ r.name }}</strong>
+            <div style="display:flex;align-items:center;gap:12px"><span style="width:44px;height:44px;box-sizing:border-box;border:1px solid #DDD6CC;border-radius:6px;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F1C18" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="m15 18-6-6 6-6"></path></svg></span><span style="width:44px;height:44px;box-sizing:border-box;border:1px solid #DDD6CC;border-radius:6px;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F1C18" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="m9 18 6-6-6-6"></path></svg></span></div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:14px;max-width:1440px">
+    <span style="align-self:flex-start;font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">5 · COPY DECK — R5 (Jeff, 10 Oct)</span>
+    <div style="background:#FFFDFB;border-radius:8px;padding:28px 32px;display:grid;grid-template-columns:200px 190px 70px minmax(0,1fr);gap:14px 24px;font-size:13px;line-height:1.5">
+      <div style="font:600 11px ui-monospace,monospace;color:#6B665E;letter-spacing:.04em">BLOCK · SLOT</div><div style="font:600 11px ui-monospace,monospace;color:#6B665E;letter-spacing:.04em">BUILD COMPONENT</div><div style="font:600 11px ui-monospace,monospace;color:#6B665E;letter-spacing:.04em">WORDS</div><div style="font:600 11px ui-monospace,monospace;color:#6B665E;letter-spacing:.04em">FINAL COPY · modal text</div>
+      <div style="grid-column:1/-1;height:1px;background:#DDD6CC"></div>
+
+      <div style="font-weight:700">1 · Trust strip<br><span style="font-weight:400;color:#6B665E">header.render-after</span></div><div>InlineStack, Icon, Text</div><div><strong>12</strong></div><div>SSL Secure Checkout · FREE Shipping + FREE In-Home Delivery · "Buy-It-Back" Guarantee<br><span style="color:#6B665E">No ⓘ, no popup.</span></div>
+
+      <div style="font-weight:700">Express divider<br><span style="font-weight:400;color:#6B665E">native</span></div><div>checkout language editor</div><div><strong>10</strong></div><div>Or checkout using Visa, MasterCard, American Express or Discover<br><span style="color:#6B665E">PayPal button: native, representation only.</span></div>
+
+      <div style="font-weight:700">2 · Swatch kit V1<br><span style="font-weight:400;color:#6B665E">native checkbox + contact.render-after</span></div><div>Native label (checkout language editor), Link → Modal</div><div><strong>19</strong></div><div>Yes, please Priority Mail me an entire kit of FREE fabric and/or leather swatches before my order is finalized. · FREE Swatch Kit details</div>
+      <div style="font-weight:700">2 · Swatch kit V2<br><span style="font-weight:400;color:#6B665E">contact.render-after</span></div><div>Checkbox (checked by default, order attribute), Button → Modal</div><div><strong>19</strong></div><div>Yes, please Priority Mail me an entire kit of FREE fabric and/or leather swatches before my order is finalized. ⓘ<br><span style="color:#6B665E">Modal "FREE Swatch Kit": Once you checkout online, we'll automatically Priority Mail you a complete kit of fabric and/or leather swatches that are available on the furniture item(s) you've ordered. Once you receive your swatch kit you can easily confirm, edit, totally change or even cancel your order with no penalty.</span></div>
+
+      <div style="font-weight:700">Headings<br><span style="font-weight:400;color:#6B665E">native</span></div><div>checkout language editor</div><div><strong>5</strong></div><div>Ship To Address · Shipping Method</div>
+
+      <div style="font-weight:700">Shipping rate<br><span style="font-weight:400;color:#6B665E">native</span></div><div>Rate name set in Shopify shipping settings</div><div><strong>8</strong></div><div>FREE Shipping + FREE In-Home Delivery Included · FREE</div>
+
+      <div style="font-weight:700">3 · White-Glove delivery<br><span style="font-weight:400;color:#6B665E">shipping-option-list.render-after</span></div><div>BlockStack, Heading, Icon, Text</div><div><strong>30</strong></div><div>FREE "White-Glove" In-Home Delivery Includes... · A convenient delivery appointment · Furniture placed in the room of your choice · Full setup and packaging removal · Small items ship FREE via FedEx or UPS<br><span style="font:500 10px ui-monospace,monospace;color:#8A6D3B">icons: clock · marker · order-box · truck. Disclosure and Expanded variant removed (#49).</span></div>
+
+      <div style="font-weight:700">4 · Payment line<br><span style="font-weight:400;color:#6B665E">payment-method-list.render-before</span></div><div>InlineStack, Icon (lock), Text, Button → Modal</div><div><strong>20</strong></div><div>All transactions are SSL secure and encrypted. Your credit card is not charged today, it's only "authorized" when you checkout. ⓘ<br><span style="color:#6B665E">Modal "Secure Payment": Rest assured, your credit card and personal information are 100% encrypted and SSL secure. Your credit card will not be charged until your order has been confirmed over the phone after you receive your swatch kit in the mail (we only "authorize" your credit card when you checkout today).</span><br><span style="font:500 10px ui-monospace,monospace;color:#8A6D3B">Replaces native subtitle + separate "authorized" line. Native subtitle text set via checkout language editor; icons need extension.</span></div>
+
+      <div style="font-weight:700">Billing<br><span style="font-weight:400;color:#6B665E">native</span></div><div>Checkbox unchecked, billing fields open</div><div>—</div><div>Use shipping address as billing address <span style="font:500 10px ui-monospace,monospace;color:#8A6D3B">native default: verify in build</span></div>
+
+      <div style="font-weight:700">5 · Why Buy From Us<br><span style="font-weight:400;color:#6B665E">block.render</span></div><div>BlockStack, Heading, Image (stars), Icon, Text, Button (prev/next), state in extension</div><div><strong>~10</strong> + reviews</div><div>Why Buy From Us · ★★★★½ {{ rating }} · {{ reviewCount }} Satisfied Customers · Review slider, 5 reviews verbatim with name + state: L. Hogans, MD · S. Adams, MI · S. Galloway, MA · P. Taggart, NJ · C. Morgenstern, NC · Secured and scanned daily by Trust Guard<br><span style="color:#6B665E">Manual, no autoplay. No dates shown (client decision).</span><br><span style="font:500 10px ui-monospace,monospace;color:#8A6D3B">Shopper Approved site rating; 30,000+ customers over 25+ years. Stars: [Image] star assets #FFCD3C (checkout icons can't be yellow).</span></div>
+      <div style="grid-column:1/-1;height:1px;background:#DDD6CC"></div>
+
+      <div style="font-weight:700">A · Financing nudge<br><span style="font-weight:400;color:#6B665E">payment-method-list.render-before</span></div><div>BlockStack, Icon, Text (small for legal)</div><div><strong>11</strong> + 31 legal</div><div>Or pay as low as {{ monthly }}/mo with Affirm. Choose Affirm below. <span style="color:#6B665E">(unchanged)</span><br><span style="color:#6B665E">Summary one-liner moved directly under native totals (block.render): Or as low as {{ monthly }}/mo with Affirm. · Calculator: total ÷ {{ financingMonthsLabel }} at {{ aprLabel }} APR.</span></div>
+
+      <div style="font-weight:700">E · Human help<br><span style="font-weight:400;color:#6B665E">footer.render-after (below policy links)</span></div><div>InlineStack, Icon, Text, Link (tel:)</div><div><strong>15</strong></div><div>Questions? Call Us, Toll Free: 1-888-378-8383 · M-F 9AM - 5PM EST (left-aligned; number bold)<br><span style="font:500 10px ui-monospace,monospace;color:#8A6D3B">tel:18883788383</span></div>
+
+      <div style="font-weight:700">F · Guarantees<br><span style="font-weight:400;color:#6B665E">actions.render-before</span></div><div>InlineStack (V1) or Grid (V2), Icon, Text</div><div><strong>12</strong> / <strong>13</strong></div><div>V1 (in mockups): SSL Secure Checkout · FREE Shipping + FREE In-Home Delivery · "Buy-It-Back" Guarantee<br><span style="color:#6B665E">V2: ✓ FREE Shipping · ✓ FREE In-Home Delivery · ✓ Style, Comfort &amp; Quality · ✓ "Buy-It-Back" Guarantee. No borders, no popups.</span></div>
+
+      <div style="font-weight:700">H · Place order + seal<br><span style="font-weight:400;color:#6B665E">native + footer.render-after</span></div><div>Branding API, checkout language editor, Image</div><div><strong>4</strong></div><div>Place Your Order Now! (72px, 20/700, #55AA33) · [Image] Trust Guard small banner (current live asset) ~310×44, centred below: "TRUST GUARD SECURED | This Website is Scanned Daily for your Protection" <span style="font:500 10px ui-monospace,monospace;color:#8A6D3B">nearest slot is footer.render-after: verify</span></div>
+
+      <div style="font-weight:700">G · Protection upsell<br><span style="font-weight:400;color:#6B665E">cart-line-list.render-after</span></div><div>Checkbox, Text</div><div><strong>7</strong></div><div>Add 5-year fabric &amp; leather protection · $149 <span style="color:#6B665E">(ⓘ popup removed per G4)</span></div>
+
+      <div style="font-weight:700">Footer<br><span style="font-weight:400;color:#6B665E">footer.render-after</span></div><div>InlineStack, Icon, Text, Link</div><div><strong>15</strong></div><div>E · help line only, left-aligned (one line desktop, may wrap mobile). No tagline.<br><span style="color:#6B665E">Native policy links above: Refund policy · Shipping · Privacy policy · Terms of service · Contact.</span></div>
+      <div style="grid-column:1/-1;height:1px;background:#DDD6CC"></div>
+      <div style="font-weight:700;color:#6B665E">Moved / removed</div><div></div><div></div><div style="color:#6B665E">B · What happens next → Parked frame. C · Savings banner ("Plus FREE White-Glove delivery, a $349 value") → removed; Affirm one-liner takes its place.</div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1440px">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="align-self:flex-start;font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">6 · BRANDING API TOKENS</span>
+      <div style="background:#FFFDFB;border-radius:8px;padding:28px 32px;display:grid;grid-template-columns:auto 1fr;gap:10px 20px;font-size:13px;align-items:center">
+        <span style="width:22px;height:22px;border-radius:5px;background:#D4732A"></span><span><strong>Accent</strong> #D4732A: checkbox, radio, links, selected borders, accent icons</span>
+        <span style="width:22px;height:22px;border-radius:5px;background:#55AA33"></span><span><strong>Primary button</strong> #55AA33 (site Add to Cart green) · hover #4A962C · text #FFFFFF · also success tone / icons</span>
+        <span style="width:22px;height:22px;border-radius:5px;background:#EDEAE4;border:1px solid #DDD6CC"></span><span><strong>Secondary button</strong> #EDEAE4 · text #6B665E</span>
+        <span style="width:22px;height:22px;border-radius:5px;background:#FFFFFF;border:1px solid #DDD6CC"></span><span><strong>Base surface</strong> #FFFFFF · main bg #FFFDFB</span>
+        <span style="width:22px;height:22px;border-radius:5px;background:#F5F1EB;border:1px solid #DDD6CC"></span><span><strong>Subdued surface</strong> #F5F1EB: order summary, trust strip, financing box</span>
+        <span style="width:22px;height:22px;border-radius:5px;background:#DDD6CC"></span><span><strong>Border</strong> #DDD6CC · field border #CFC6B9</span>
+        <span style="width:22px;height:22px;border-radius:5px;background:#1F1C18"></span><span><strong>Text</strong> #1F1C18 · subdued #6B665E · critical #B3261E</span>
+        <span style="grid-column:1/-1;height:1px;background:#DDD6CC"></span>
+        <span style="font:600 11px ui-monospace,monospace;color:#6B665E">RADIUS</span><span>base = 6px everywhere</span>
+        <span style="font:600 11px ui-monospace,monospace;color:#6B665E">HEADING</span><span style="font:700 16px 'Open Sans',sans-serif">Open Sans 700</span>
+        <span style="font:600 11px ui-monospace,monospace;color:#6B665E">BODY</span><span>Open Sans 400/600 (matches clubfurniture.com) · sizes: small 12 · base 14 · medium 16 · large 20</span>
+        <span style="font:600 11px ui-monospace,monospace;color:#6B665E">FIELDS</span><span>Outlined, label inside, 52px</span>
+        <span style="font:600 11px ui-monospace,monospace;color:#6B665E">BUTTON</span><span>Place order 72px, base radius, 20/700; label "Place Your Order Now!" set in checkout language editor</span>
+        <span style="font:600 11px ui-monospace,monospace;color:#6B665E">HEADER</span><span>Logo start-aligned desktop, centered mobile</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="align-self:flex-start;font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">7 · PRIORITY — impact / build effort</span>
+      <div style="background:#FFFDFB;border-radius:8px;padding:28px 32px;display:flex;flex-direction:column;gap:14px;font-size:13px;line-height:1.5">
+        <div style="padding:10px 12px;border:1px solid #D4732A;border-radius:6px;font-weight:700">Launch after the one-page test verdict (29 Oct).</div>
+        <div style="display:flex;gap:14px"><strong style="flex:none;width:22px;color:#D4732A">1</strong><div><strong>A · Financing</strong>: High impact · <span style="color:#3E8A22;font-weight:600">Low effort</span><br><span style="color:#6B665E">A {{ monthly }}/mo frame removes the biggest objection on a ~$3,400 order. Affirm is already live, so this is Text and Icon only.</span></div></div>
+        <div style="display:flex;gap:14px"><strong style="flex:none;width:22px;color:#D4732A">2</strong><div><strong>F · Guarantees + trust strip</strong>: High · <span style="color:#3E8A22;font-weight:600">Low</span><br><span style="color:#6B665E">Puts the risk-reversals next to the button. Static content, no popups.</span></div></div>
+        <div style="display:flex;gap:14px"><strong style="flex:none;width:22px;color:#D4732A">3</strong><div><strong>E · Human help</strong>: Medium · <span style="color:#3E8A22;font-weight:600">Low</span><br><span style="color:#6B665E">Number and hours now known. A tel: link plus a mailto: link.</span></div></div>
+        <div style="display:flex;gap:14px"><strong style="flex:none;width:22px;color:#D4732A">4</strong><div><strong>3 · White-Glove block + payment line</strong>: Medium · <span style="color:#3E8A22;font-weight:600">Low</span><br><span style="color:#6B665E">Static Text, Icon and Disclosure. Headline layout pending the call with Jeff.</span></div></div>
+        <div style="display:flex;gap:14px"><strong style="flex:none;width:22px;color:#D4732A">5</strong><div><strong>D · Review slider</strong>: Medium · <span style="color:#B8860B;font-weight:600">Medium</span><br><span style="color:#6B665E">Five fixed reviews, no dates shown (client decision), stored in extension settings. Prev/next state lives in the extension.</span></div></div>
+        <div style="display:flex;gap:14px"><strong style="flex:none;width:22px;color:#D4732A">6</strong><div><strong>G · Protection upsell</strong>: Low–Medium · <span style="color:#B3261E;font-weight:600">High</span><br><span style="color:#6B665E">Adds order value but also a decision at the riskiest moment. Test it last.</span></div></div>
+        <div style="display:flex;gap:14px;color:#6B665E"><strong style="flex:none;width:22px">—</strong><div><strong>B · What happens next</strong>: Parked (removed per client, may return). See the Parked frame.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1440px">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="align-self:flex-start;font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">8 · REMOVED BY THIS REVISION (R4)</span>
+      <div style="background:#FFFDFB;border-radius:8px;padding:28px 32px;display:flex;flex-direction:column;gap:12px;font-size:13px;line-height:1.5">
+        <div><strong>Popups on the trust strip and guarantees.</strong> <span style="color:#6B665E">Buy-It-Back ⓘ, 30-Day Home Trial, Free Returns, Buy-It-Back and 25 Years Online. Only the swatch and payment modals remain.</span></div>
+        <div><strong>Outlined guarantee tiles.</strong> <span style="color:#6B665E">They looked like buttons. Now a plain row (V1) or checkmarks (V2).</span></div>
+        <div><strong>"What happens next" timeline.</strong> <span style="color:#6B665E">Moved to the Parked frame, unchanged.</span></div>
+        <div><strong>Savings banner and its $349 value.</strong> <span style="color:#6B665E">Affirm one-liner takes its place under totals. Native TOTAL SAVINGS stays.</span></div>
+        <div><strong>"Read more" review popover.</strong> <span style="color:#6B665E">The slider shows full text.</span></div>
+        <div><strong>Separate native payment subtitle and "authorized" line.</strong> <span style="color:#6B665E">Merged into one line.</span></div>
+        <div><strong>Previous heading and body fonts.</strong> <span style="color:#6B665E">Open Sans everywhere, matching the site.</span></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="align-self:flex-start;font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">9 · REMOVE FROM CURRENT PAGE</span>
+      <div style="background:#FFFDFB;border-radius:8px;padding:28px 32px;display:flex;flex-direction:column;gap:12px;font-size:13px;line-height:1.5">
+        <div><strong>The five-line bold intro paragraph.</strong> <span style="color:#6B665E">It pushes email below the fold. Its claims now live in the trust strip.</span></div>
+        <div><strong>The illustrated 2×2 guarantee graphic.</strong> <span style="color:#6B665E">An inaccessible image that's missing on mobile. Replaced by guarantee strip F.</span></div>
+        <div><strong>"Mistake-Free ORDERING".</strong> <span style="color:#6B665E">Vague. The swatch modal explains how it actually works.</span></div>
+        <div><strong>The large Trust Guard badge.</strong> <span style="color:#6B665E">Now the small ~310×44 Trust Guard banner under the button plus one line in "Why Buy From Us".</span></div>
+        <div><strong>The single static review.</strong> <span style="color:#6B665E">Now a five-review slider with full text. No dates shown (client decision).</span></div>
+        <div><strong>"Text me with news and offers".</strong> <span style="color:#6B665E">Turn off SMS consent in checkout settings.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:14px;max-width:1440px">
+    <span style="align-self:flex-start;font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">10 · OPEN INPUTS BEFORE BUILD</span>
+    <div style="background:#FFFDFB;border-radius:8px;padding:28px 32px;display:grid;grid-template-columns:minmax(0,1fr) 140px 90px;gap:12px 24px;font-size:13px;line-height:1.5;align-items:center">
+      <div style="font:600 11px ui-monospace,monospace;color:#6B665E;letter-spacing:.04em">ITEM</div><div style="font:600 11px ui-monospace,monospace;color:#6B665E;letter-spacing:.04em">OWNER</div><div style="font:600 11px ui-monospace,monospace;color:#6B665E;letter-spacing:.04em">STATUS</div>
+      <div style="grid-column:1/-1;height:1px;background:#DDD6CC"></div>
+      <div>Affirm disclosure wording + confirm 0% / 36-mo availability</div><div style="color:#6B665E">Jeff/Affirm</div><div><span style="font:600 11px ui-monospace,monospace;color:#D4732A;border:1px solid #D4732A;border-radius:3px;padding:2px 6px">Open</span></div>
+      <div>"4.7 / 30,000+ Satisfied Customers" source: Shopper Approved rating; customers over 25+ years</div><div style="color:#6B665E">Jeff</div><div><span style="font:600 11px ui-monospace,monospace;color:#3E8A22;border:1px solid #3E8A22;border-radius:3px;padding:2px 6px">Done</span></div>
+      <div>Review dates: none shown (client decision)</div><div style="color:#6B665E">Jeff/Anil</div><div><span style="font:600 11px ui-monospace,monospace;color:#3E8A22;border:1px solid #3E8A22;border-radius:3px;padding:2px 6px">Done</span></div>
+      <div>Billing default behaviour (unchecked "use shipping address")</div><div style="color:#6B665E">Anil</div><div><span style="font:600 11px ui-monospace,monospace;color:#D4732A;border:1px solid #D4732A;border-radius:3px;padding:2px 6px">Open</span></div>
+      <div>Trust Guard seal placement (footer.render-after)</div><div style="color:#6B665E">Anil</div><div><span style="font:600 11px ui-monospace,monospace;color:#D4732A;border:1px solid #D4732A;border-radius:3px;padding:2px 6px">Open</span></div>
+      <div>Rename shipping rate in Shopify settings</div><div style="color:#6B665E">Jeff/Anil</div><div><span style="font:600 11px ui-monospace,monospace;color:#D4732A;border:1px solid #D4732A;border-radius:3px;padding:2px 6px">Open</span></div>
+      <div>Call with Jeff re: White-Glove headline layout (resolved by #48)</div><div style="color:#6B665E">Anil</div><div><span style="font:600 11px ui-monospace,monospace;color:#3E8A22;border:1px solid #3E8A22;border-radius:3px;padding:2px 6px">Done</span></div>
+      <div>Buy-It-Back wording + refund policy link</div><div style="color:#6B665E">Jeff</div><div><span style="font:600 11px ui-monospace,monospace;color:#D4732A;border:1px solid #D4732A;border-radius:3px;padding:2px 6px">Open</span></div>
+      <div>Swatch checkbox: V1 or V2 · Guarantees: V1 or V2</div><div style="color:#6B665E">Jeff</div><div><span style="font:600 11px ui-monospace,monospace;color:#D4732A;border:1px solid #D4732A;border-radius:3px;padding:2px 6px">Open</span></div>
+      <div>Launch timing: after one-page test verdict (29 Oct)</div><div style="color:#6B665E">Anil</div><div><span style="font:600 11px ui-monospace,monospace;color:#D4732A;border:1px solid #D4732A;border-radius:3px;padding:2px 6px">Open</span></div>
+      <div>Verify in editor: Affirm line under totals, mobile trust-strip position</div><div style="color:#6B665E">Anil</div><div><span style="font:600 11px ui-monospace,monospace;color:#D4732A;border:1px solid #D4732A;border-radius:3px;padding:2px 6px">Open</span></div>
+      <div>Verify: summary shipping label rename via language editor</div><div style="color:#6B665E">Anil</div><div><span style="font:600 11px ui-monospace,monospace;color:#D4732A;border:1px solid #D4732A;border-radius:3px;padding:2px 6px">Open</span></div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:14px;max-width:1440px">
+    <span style="align-self:flex-start;font:600 11px/1 ui-monospace,Menlo,monospace;background:#1F1C18;color:#FFFFFF;border-radius:4px;padding:5px 8px">11 · CLIENT FEEDBACK APPLIED (Jeff, 9–13 Oct)</span>
+    <div style="background:#FFFDFB;border-radius:8px;padding:28px 32px;display:grid;grid-template-columns:120px minmax(0,1fr);gap:10px 24px;font-size:13px;line-height:1.5">
+      <div style="font:600 11px ui-monospace,monospace;color:#6B665E;letter-spacing:.04em">COMMENT #</div><div style="font:600 11px ui-monospace,monospace;color:#6B665E;letter-spacing:.04em">CHANGE MADE</div>
+      <div style="grid-column:1/-1;height:1px;background:#DDD6CC"></div>
+      <div style="font-weight:700">G1</div><div>Open Sans for all headings and body; previous heading and body fonts removed, incl. tokens.</div>
+      <div style="font-weight:700">G2</div><div>Every "Free" is now "FREE"; native strings tagged "checkout language editor".</div>
+      <div style="font-weight:700">G3</div><div>Primary green #55AA33 on button, success icons and tokens.</div>
+      <div style="font-weight:700">G4</div><div>All popups removed except the swatch kit and payment modals.</div>
+      <div style="font-weight:700">H1</div><div>Trust strip: SSL Secure Checkout · FREE Shipping + FREE In-Home Delivery · "Buy-It-Back" Guarantee. No ⓘ.</div>
+      <div style="font-weight:700">E1 · E2</div><div>Two-color PayPal logo (representation only); divider lists Visa, MasterCard, American Express, Discover.</div>
+      <div style="font-weight:700">S1 · S2</div><div>New swatch label, checked by default, ⓘ kept; modal retitled "FREE Swatch Kit" with new body.</div>
+      <div style="font-weight:700">A1 · A2</div><div>"Ship To Address" and "Shipping Method"; rate renamed "FREE Shipping + FREE In-Home Delivery Included" · FREE.</div>
+      <div style="font-weight:700">A3</div><div>White-Glove block moved below the shipping option with new headline, list and disclosure text. CONFIRM layout with Jeff.</div>
+      <div style="font-weight:700">A4</div><div>"What happens next" removed from checkout; parked, unchanged, in its own frame.</div>
+      <div style="font-weight:700">P1 · P2 · P3</div><div>One payment line with lock + ⓘ; Affirm box unchanged below; modal "Secure Payment" rewritten.</div>
+      <div style="font-weight:700">P4</div><div>Billing checkbox unchecked with billing fields open.</div>
+      <div style="font-weight:700">B1</div><div>Outlined tiles removed; new frame "Guarantees: V1 vs V2"; V1 used in mockups.</div>
+      <div style="font-weight:700">B2</div><div>Help line with 1-888-378-8383, M-F 9AM - 5PM EST, Contact Us (mailto). CONFIRM tags removed.</div>
+      <div style="font-weight:700">F1 · F2 · F3</div><div>"Place Your Order Now!" 64px, 18/700, #55AA33; Trust Guard seal placeholder below; new footer line.</div>
+      <div style="font-weight:700">O1</div><div>Savings banner, whiteGloveValue prop and fallback frame 2c removed; Affirm one-liner under totals.</div>
+      <div style="font-weight:700">O2 · O3</div><div>"Why Buy From Us"; ★★★★★ 4.7 · 30,000+ Satisfied Customers (CONFIRM source).</div>
+      <div style="font-weight:700">#30 · O4</div><div>Slider added; dynamic monthly dates not applied (misleading review dates).</div>
+      <div style="font-weight:700">O5</div><div>Trust Guard line kept.</div>
+      <div style="font-weight:700">D1 · D2</div><div>Copy deck, tokens, priority list, open inputs updated; this section added.</div>
+      <div style="grid-column:1/-1;height:1px;background:#DDD6CC"></div>
+      <div style="grid-column:1/-1;font:600 11px ui-monospace,monospace;color:#6B665E;letter-spacing:.04em">R5 · FIGMA COMMENTS #47–#51 + REPLIES (Jeff, 10 Oct)</div>
+      <div style="font-weight:700">#47</div><div>Rating stars: four solid #FFCD3C + one half star (grey outline), matching Shopper Approved on clubfurniture.com. Tagged [Image] star assets.</div>
+      <div style="font-weight:700">#48</div><div>White-Glove headline: FREE "White-Glove" In-Home Delivery Includes...</div>
+      <div style="font-weight:700">#49</div><div>"What is White-Glove delivery?" disclosure and its expanded state removed; Expanded card variant deleted; copy deck row updated.</div>
+      <div style="font-weight:700">#50</div><div>New first list item: clock · "A convenient delivery appointment".</div>
+      <div style="font-weight:700">#51</div><div>Price-tag icon restored before TOTAL SAVINGS $150.00 (NATIVE).</div>
+      <div style="font-weight:700">#24 reply</div><div>Place order button 72px, 20/700, #55AA33; large Trust Guard banner replaced by the small live banner (~310×44), centred below.</div>
+      <div style="font-weight:700">#27 reply</div><div>New frame "Summary shipping: client request": FREE Shipping + FREE In-Home Delivery · FREE. Main mockups keep "Enter shipping address".</div>
+      <div style="font-weight:700">#30 reply</div><div>Review dates removed from all five reviews and props; name + state only. Note now "No dates shown (client decision)".</div>
+      <div style="font-weight:700">#31 reply</div><div>Jeff: "4.7 is from Shopper Approved site level reviews and we've had over 30,000 customers in our 25+ year history." Rating text stays "4.7 · 30,000+ Satisfied Customers"; CONFIRM tag removed; source note "Shopper Approved site rating; 30,000+ customers over 25+ years".</div>
+      <div style="font-weight:700">#9</div><div>White-Glove layout question resolved by #48 (headline dictated by Jeff); CONFIRM tag removed from the card.</div>
+      <div style="font-weight:700">#53</div><div>Trust Guard banner under "Place Your Order Now!" now full button width (600px desktop, full content width mobile), like the cart page; same live artwork scaled proportionally; 72px button and 16px gap kept.</div>
+      <div style="font-weight:700">#55</div><div>Help line now "Questions? Call Us, Toll Free: 1-888-378-8383 · M-F 9AM - 5PM EST · Contact Us" (tel: + mailto kept). Fits one line in the 600px desktop column; nothing removed. May wrap to two lines on mobile.</div>
+      <div style="grid-column:1/-1;height:1px;background:#DDD6CC"></div>
+      <div style="grid-column:1/-1;font:600 11px ui-monospace,monospace;color:#6B665E;letter-spacing:.04em">R8 · JEFF 13 OCT: BOLD TRUST STRIP; HELP LINE MOVED TO FOOTER</div>
+      <div style="font-weight:700">13 Oct · 1</div><div>Header trust strip (desktop row + mobile slider states) now 600, matching the trust row above the button. Icons unchanged.</div>
+      <div style="font-weight:700">13 Oct · 2</div><div>Help line removed from above the button (only the trust row remains there) and moved to footer.render-after below the policy links, followed by the footer tagline; tel: + mailto kept. "Contact" removed from policy links (NATIVE: delete Contact information policy in Shopify; confirm with client). 72px button and full-width Trust Guard banner unchanged.</div>
+      <div style="grid-column:1/-1;height:1px;background:#DDD6CC"></div>
+      <div style="grid-column:1/-1;font:600 11px ui-monospace,monospace;color:#6B665E;letter-spacing:.04em">R9 · JEFF 13 OCT: KEEP NATIVE CONTACT LINK; HELP LINE PHONE-ONLY; TAGLINE REMOVED</div>
+      <div style="font-weight:700">13 Oct · 3</div><div>Native "Contact" link restored: Refund policy · Shipping · Privacy policy · Terms of service · Contact. Delete-policy note removed.</div>
+      <div style="font-weight:700">13 Oct · 4</div><div>Help line now "Questions? Call Us, Toll Free: 1-888-378-8383 · M-F 9AM - 5PM EST", left-aligned; tel: link (bold) kept, "Contact Us" + mailto removed.</div>
+      <div style="font-weight:700">13 Oct · 5</div><div>Tagline "Club Furniture... Luxurious Home Furnishings For Less!" removed.</div>
+    </div>
+  </div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:14px;padding:48px;font-family:'Open Sans',sans-serif;color:#1F1C18">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px"><span style="font:600 11px/1 ui-monospace,Menlo,monospace;background:#6B665E;color:#FFFFFF;border-radius:4px;padding:5px 8px">PARKED · What happens next (removed per client, may return)</span><span style="font-size:13px;color:#6B665E">Unchanged from R3. Was shipping-option-list.render-after.</span></div>
+  <div data-screen-label="Parked: What happens next" style="display:flex;gap:20px;align-items:flex-start;padding:24px;border:1px dashed #A8A096;border-radius:8px">
+    <div style="width:360px;display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:700">After address · swatch on</span><dc-import name="WhatHappensNext" timeline-state="after" show-swatch="{{ true }}" delivery-window="{{ deliveryWindow }}" build-weeks="{{ buildWeeks }}" hint-size="360px,250px"></dc-import></div>
+    <div style="width:360px;display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:700">After address · swatch off</span><dc-import name="WhatHappensNext" timeline-state="after" show-swatch="{{ false }}" delivery-window="{{ deliveryWindow }}" build-weeks="{{ buildWeeks }}" hint-size="360px,220px"></dc-import></div>
+    <div style="width:360px;display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:700">Before address entered</span><dc-import name="WhatHappensNext" timeline-state="before" show-swatch="{{ true }}" delivery-window="{{ deliveryWindow }}" build-weeks="{{ buildWeeks }}" hint-size="360px,250px"></dc-import></div>
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;swatchVariant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;v2&quot;,&quot;options&quot;:[&quot;v1&quot;,&quot;v2&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Variants&quot;},&quot;timelineState&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;after&quot;,&quot;options&quot;:[&quot;after&quot;,&quot;before&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Variants&quot;},&quot;showProtectionUpsell&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Variants&quot;},&quot;financingMonths&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:36,&quot;options&quot;:[12,24,36],&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Financing&quot;},&quot;financingApr&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:36,&quot;step&quot;:1,&quot;unit&quot;:&quot;%&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Financing&quot;},&quot;rating&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;4.7&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Reviews&quot;},&quot;reviewCount&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;30,000+&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Reviews&quot;},&quot;deliveryWindow&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Nov 12 – Nov 26&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Parked timeline&quot;},&quot;buildWeeks&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;4–6&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Parked timeline&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props, total = 3379.99;
+    const n = Number(p.financingMonths ?? 36), apr = Number(p.financingApr ?? 0);
+    const r = apr / 1200;
+    const pmt = r === 0 ? total / n : total * r / (1 - Math.pow(1 + r, -n));
+    return {
+      monthly: '$' + Math.round(pmt), financingMonthsLabel: n + ' months', aprLabel: apr + '%',
+      deliveryWindow: p.deliveryWindow ?? 'Nov 12 – Nov 26', buildWeeks: p.buildWeeks ?? '4–6',
+      showProtectionUpsell: p.showProtectionUpsell ?? false,
+      swatchVariant: p.swatchVariant ?? 'v2', timelineState: p.timelineState ?? 'after',
+      rating: p.rating ?? '4.7', reviewCount: p.reviewCount ?? '30,000+',
+      reviews: [
+        { name: 'L. Hogans, MD', text: "I am thrilled with my custom sofa and loveseat, comfortable and beautifully made. The price was so reasonable, my two sofas cost a little more than my sister's recent Pottery Barn single sofa purchase. Delivery was earlier than I even expected, and delivery guys were great. I cannot tell you how happy I am with my purchase. Thank you so much!" },
+        { name: 'S. Adams, MI', text: "Club Furniture's reps were very responsive to my calls and questions. The finished piece is beautiful, comfortable and well made. I am very happy with my experience!" },
+        { name: 'S. Galloway, MA', text: 'First time purchaser of Club Furniture and a lifelong customer of high end, brand names. Bought the Newport sofa bed and recliner set. Completely amazed at the quality. Better built than most all of our other high-end furniture. The set is gorgeous!' },
+        { name: 'P. Taggart, NJ', text: 'So happy with my purchase. Able to choose upholstery easily. Color on screen very accurate. Delivery was fantastic. Right on time. Many thanks. Would recommend to everyone!' },
+        { name: 'C. Morgenstern, NC', text: "I ordered a tufted sofa, it has got to be one of the most beautiful pieces of furniture I've ever seen. The quality could not be higher, the leather in both feel and color is magnificent. American made furniture cannot be beat. I strongly recommend Club Furniture without hesitation." }
+      ].map((r, i) => ({ ...r, state: 'State ' + (i + 1) + ' · ' + (i + 1) + ' of 5' }))
+    };
+  }
+}
+</script>
+</body>
+</html>

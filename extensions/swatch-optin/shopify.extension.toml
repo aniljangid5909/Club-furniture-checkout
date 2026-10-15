@@ -1,0 +1,31 @@
+api_version = "2026-07"
+
+[[extensions]]
+type = "ui_extension"
+name = "Swatch kit opt-in"
+handle = "swatch-optin"
+uid = "72eaeb67-5d01-408e-b19a-816f840447cf"
+
+  [[extensions.targeting]]
+  target = "purchase.checkout.contact.render-after"
+  module = "./src/SwatchOptIn.tsx"
+
+  [extensions.settings]
+
+    [[extensions.settings.fields]]
+    key = "swatch_mode"
+    type = "single_line_text_field"
+    name = "Swatch display mode"
+    description = "Type 'extension' for the checked-by-default checkbox + attribute, or 'native_link' for only a 'FREE Swatch Kit details' link (use while the native email-marketing checkbox is still live). Anything other than 'extension' is treated as native_link. Default: native_link."
+
+    [[extensions.settings.fields]]
+    key = "checkbox_label"
+    type = "multi_line_text_field"
+    name = "Checkbox label text"
+    description = "The text shown next to the swatch checkbox (extension mode). Leave blank to use the default: 'Yes, please Priority Mail me an entire kit of FREE fabric and/or leather swatches before my order is finalized.'"
+
+    [[extensions.settings.fields]]
+    key = "modal_body"
+    type = "multi_line_text_field"
+    name = "Swatch modal text"
+    description = "The text inside the 'FREE Swatch Kit' info popup. Leave blank to use the default wording."

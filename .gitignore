@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+dist/
+*.log
+.shopify/
+
+# Redundant large design archives (extracted content is already tracked)
+design/*.zip

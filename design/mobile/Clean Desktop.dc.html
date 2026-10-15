@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#FFFDFB} a{color:#D4732A} a:hover{color:#B85F1F} [data-clean] [data-annot]{display:none}</style>
+</helmet>
+<div data-clean="true" data-screen-label="Clean desktop" style="width:1440px;background:#FFFDFB;display:flex;flex-direction:column;font-family:'Open Sans',sans-serif;color:#1F1C18">
+  <div style="display:flex;padding:22px 0 18px 160px;border-bottom:1px solid #DDD6CC;background:#FFFFFF"><img src="https://cdn.shopify.com/s/files/1/1971/0317/files/cf-logo_x320.png?v=1691764950" alt="Club Furniture" style="display:block;flex:none;width:346px;height:72px;object-fit:contain"></div>
+  <dc-import name="TrustStrip" hint-size="100%,48px"></dc-import>
+  <div style="display:grid;grid-template-columns:1fr 1fr">
+    <div style="display:flex;justify-content:flex-end;padding:40px 48px 60px 0"><div style="width:600px"><dc-import name="CheckoutMain" monthly="{{ monthly }}" swatch-variant="{{ swatchVariant }}" timeline-state="{{ timelineState }}" hint-size="600px,2800px"></dc-import></div></div>
+    <div style="background:#F5F1EB;border-left:1px solid #DDD6CC;padding:40px 0 60px 44px"><div style="width:440px"><dc-import name="OrderSummary" monthly="{{ monthly }}" show-upsell="{{ showProtectionUpsell }}" rating="{{ rating }}" review-count="{{ reviewCount }}" hint-size="440px,1000px"></dc-import></div></div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;swatchVariant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;v2&quot;,&quot;options&quot;:[&quot;v1&quot;,&quot;v2&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;timelineState&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;after&quot;,&quot;options&quot;:[&quot;after&quot;,&quot;before&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;showProtectionUpsell&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;},&quot;financingApr&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:36,&quot;step&quot;:1,&quot;unit&quot;:&quot;%&quot;,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props, total = 3379.99;
+    const n = Number(p.financingMonths ?? 36), r = Number(p.financingApr ?? 0) / 1200;
+    const pmt = r === 0 ? total / n : total * r / (1 - Math.pow(1 + r, -n));
+    return {
+      monthly: '$' + Math.round(pmt),
+      showProtectionUpsell: p.showProtectionUpsell ?? false,
+      swatchVariant: p.swatchVariant ?? 'v2', timelineState: p.timelineState ?? 'after',
+      rating: p.rating ?? '4.7', reviewCount: p.reviewCount ?? '30,000+'
+    };
+  }
+}
+</script>
+</body>
+</html>

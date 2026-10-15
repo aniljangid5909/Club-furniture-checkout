@@ -1,0 +1,11 @@
+{
+  "name": "swatch-optin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Swatch-kit opt-in — purchase.checkout.contact.render-after",
+  "dependencies": {
+    "@shopify/ui-extensions": "~2026.7.0",
+    "preact": "^10.20.0",
+    "@preact/signals": "^2.0.0"
+  }
+}

@@ -1,0 +1,31 @@
+api_version = "2026-07"
+
+[[extensions]]
+type = "ui_extension"
+name = "Trust row (above pay button)"
+handle = "trust-actions"
+uid = "ee6174a4-b55d-45c9-adec-383500e50713"
+
+  [[extensions.targeting]]
+  target = "purchase.checkout.actions.render-before"
+  module = "./src/TrustActions.tsx"
+
+  [extensions.settings]
+
+    [[extensions.settings.fields]]
+    key = "icon_lock_url"
+    type = "single_line_text_field"
+    name = "Lock icon URL (optional)"
+    description = "Only needed if the orange icons don't appear. Upload assets/lock.svg to Shopify Files and paste its URL here."
+
+    [[extensions.settings.fields]]
+    key = "icon_truck_url"
+    type = "single_line_text_field"
+    name = "Truck icon URL (optional)"
+    description = "Only needed if the orange icons don't appear. Upload assets/truck.svg to Shopify Files and paste its URL here."
+
+    [[extensions.settings.fields]]
+    key = "icon_return_url"
+    type = "single_line_text_field"
+    name = "Return icon URL (optional)"
+    description = "Only needed if the orange icons don't appear. Upload assets/return.svg to Shopify Files and paste its URL here."

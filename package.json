@@ -1,0 +1,18 @@
+{
+  "name": "club-furniture-checkout",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Club Furniture one-page checkout UI extensions (Checkout UI extensions, Polaris web components).",
+  "workspaces": [
+    "extensions/*"
+  ],
+  "scripts": {
+    "dev": "shopify app dev",
+    "build": "shopify app build",
+    "config:link": "shopify app config link"
+  },
+  "devDependencies": {
+    "@shopify/app": "latest",
+    "@shopify/cli": "latest"
+  }
+}

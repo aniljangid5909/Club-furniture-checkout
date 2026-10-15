@@ -1,0 +1,31 @@
+api_version = "2026-07"
+
+[[extensions]]
+type = "ui_extension"
+name = "Order summary: Affirm line"
+handle = "summary-affirm"
+uid = "1c076f23-53ed-41e5-9f26-73584324dfaf"
+
+  [[extensions.targeting]]
+  target = "purchase.checkout.block.render"
+  module = "./src/SummaryAffirm.tsx"
+
+  [extensions.settings]
+
+    [[extensions.settings.fields]]
+    key = "financing_months"
+    type = "number_integer"
+    name = "Affirm financing months"
+    description = "Months used for the Affirm estimate. Default 36."
+
+    [[extensions.settings.fields]]
+    key = "financing_apr"
+    type = "number_decimal"
+    name = "Affirm APR (percent)"
+    description = "Annual percentage rate for the estimate. 0 means 0% (total divided by months). Default 0."
+
+    [[extensions.settings.fields]]
+    key = "affirm_min_total"
+    type = "number_decimal"
+    name = "Affirm minimum order total"
+    description = "Hide the Affirm line when the order total is below this amount. Default 50."

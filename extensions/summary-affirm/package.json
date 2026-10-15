@@ -1,0 +1,11 @@
+{
+  "name": "summary-affirm",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Order-summary Affirm one-liner — purchase.checkout.block.render",
+  "dependencies": {
+    "@shopify/ui-extensions": "~2026.7.0",
+    "preact": "^10.20.0",
+    "@preact/signals": "^2.0.0"
+  }
+}

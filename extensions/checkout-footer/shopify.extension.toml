@@ -1,0 +1,19 @@
+api_version = "2026-07"
+
+[[extensions]]
+type = "ui_extension"
+name = "Checkout footer (Trust Guard + help)"
+handle = "checkout-footer"
+uid = "eb1d0024-6c18-428c-99fe-6305fc7900a2"
+
+  [[extensions.targeting]]
+  target = "purchase.checkout.footer.render-after"
+  module = "./src/CheckoutFooter.tsx"
+
+  [extensions.settings]
+
+    [[extensions.settings.fields]]
+    key = "show_tagline"
+    type = "boolean"
+    name = "Show tagline"
+    description = "Show the 'Club Furniture... Luxurious Home Furnishings For Less!' tagline. Default OFF (the updated design removed it). Turn on to bring it back."

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</helmet>
+<div ref="{{ rootRef }}" style="position:relative;display:flex;flex-direction:column;gap:10px;font-family:'Open Sans',sans-serif;color:#1F1C18;font-size:14px;line-height:1.45">
+  <sc-if value="{{ isV2 }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <span data-annot="1" style="font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#8A6D3B;background:#F6EBDD;border-radius:3px;padding:4px 6px;align-self:flex-start">V2 · EXTENSION · contact.render-after · Checkbox (checked by default) → order attribute + Modal</span>
+      <div style="display:flex;align-items:flex-start;gap:10px">
+        <button onClick="{{ toggleCheck }}" aria-label="Toggle swatch kit" style="all:unset;cursor:pointer;flex:none;margin-top:1px">
+          <sc-if value="{{ checked }}" hint-placeholder-val="{{ true }}"><span style="width:18px;height:18px;border-radius:4px;background:#D4732A;display:flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" style="stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><path d="M20 6 9 17l-5-5"></path></svg></span></sc-if>
+          <sc-if value="{{ unchecked }}" hint-placeholder-val="{{ false }}"><span style="display:block;width:18px;height:18px;box-sizing:border-box;border-radius:4px;border:1px solid #CFC6B9;background:#FFFFFF"></span></sc-if>
+        </button>
+        <span>Yes, please Priority Mail me an entire kit of FREE fabric and/or leather swatches before my order is finalized. <button onClick="{{ openInfo }}" aria-label="About the swatch kit" style="all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:3px;padding:2px;border-radius:4px;vertical-align:-3px" style-hover="background:#EDEAE4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B665E" style="stroke-width:2;stroke-linecap:round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4M12 8h.01"></path></svg><span data-annot="1" style="font:500 9px/1 ui-monospace,Menlo,monospace;color:#8A6D3B">info</span></button></span>
+      </div>
+      <span data-annot="1" style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#8A6D3B">Note: requires turning off native email marketing opt-in and updating swatch-kit fulfilment to read the attribute.</span>
+    </div>
+  </sc-if>
+  <sc-if value="{{ isV1 }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center"><span data-annot="1" style="font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#6B665E;background:#EDEAE4;border-radius:3px;padding:4px 6px">V1 · NATIVE marketing checkbox</span><span data-annot="1" style="font:600 9px/1 ui-monospace,Menlo,monospace;color:#5B4B8A;background:#ECE7F5;border-radius:3px;padding:3px 4px">checkout language editor</span></div>
+      <div style="display:flex;align-items:flex-start;gap:10px">
+        <button onClick="{{ toggleCheck }}" aria-label="Toggle swatch kit" style="all:unset;cursor:pointer;flex:none;margin-top:1px">
+          <sc-if value="{{ checked }}" hint-placeholder-val="{{ true }}"><span style="width:18px;height:18px;border-radius:4px;background:#D4732A;display:flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" style="stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><path d="M20 6 9 17l-5-5"></path></svg></span></sc-if>
+          <sc-if value="{{ unchecked }}" hint-placeholder-val="{{ false }}"><span style="display:block;width:18px;height:18px;box-sizing:border-box;border-radius:4px;border:1px solid #CFC6B9;background:#FFFFFF"></span></sc-if>
+        </button>
+        <span>Yes, please Priority Mail me an entire kit of FREE fabric and/or leather swatches before my order is finalized.</span>
+      </div>
+      <span data-annot="1" style="font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#8A6D3B;background:#F6EBDD;border-radius:3px;padding:4px 6px;align-self:flex-start">EXTENSION · contact.render-after · Link → Modal</span>
+      <button onClick="{{ openInfo }}" style="all:unset;cursor:pointer;align-self:flex-start;margin-left:28px;font-size:12px;color:#6B665E;text-decoration:underline">FREE Swatch Kit details</button>
+      <span data-annot="1" style="font:500 11px/1.4 ui-monospace,Menlo,monospace;color:#8A6D3B">Caveat: this native checkbox also records email marketing consent and can't be pre-checked natively. Check with legal before using it for swatches.</span>
+    </div>
+  </sc-if>
+  <sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeModal }}" style="position:absolute;top:{{ mTop }}px;left:{{ mLeft }}px;width:{{ mW }}px;height:{{ mH }}px;background:rgba(31,28,24,.45);z-index:50">
+      <div onClick="{{ stop }}" role="dialog" style="position:absolute;left:{{ mCx }}px;top:{{ mCy }}px;transform:translate(-50%,-50%);max-height:80%;overflow:auto;width:min(520px,calc(100% - 32px));box-sizing:border-box;background:#FFFFFF;border-radius:10px;padding:24px 28px;display:flex;flex-direction:column;gap:12px;font-size:16px;line-height:1.5">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px"><h3 style="margin:0;font:700 22px/1.25 'Open Sans',sans-serif">FREE Swatch Kit</h3><button onClick="{{ closeModal }}" aria-label="Close" style="all:unset;cursor:pointer;flex:none;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:6px;color:#6B665E" style-hover="background:#F5F1EB"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="stroke-width:2;stroke-linecap:round"><path d="M6 6l12 12M18 6 6 18"></path></svg></button></div>
+        <p style="margin:0">Once you checkout online, we'll automatically Priority Mail you a complete kit of fabric and/or leather swatches that are available on the furniture item(s) you've ordered. Once you receive your swatch kit you can easily confirm, edit, totally change or even cancel your order with no penalty.</p>
+        <span data-annot="1" style="align-self:flex-start;font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.04em;color:#8A6D3B;background:#F6EBDD;border-radius:3px;padding:4px 6px">Modal (tap) · Button overlay → Modal</span>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: false, local: undefined };
+  root = React.createRef();
+  renderVals() {
+    const v = this.props.variant ?? 'v2', s = this.state;
+    const checked = this.props.checked ?? s.local ?? true;
+    return {
+      isV1: v === 'v1', isV2: v !== 'v1', checked, unchecked: !checked,
+      modalOpen: s.open, mTop: s.mTop ?? 0, mLeft: s.mLeft ?? 0, mW: s.mW ?? 0, mH: s.mH ?? 0, mCx: s.mCx ?? 0, mCy: s.mCy ?? 0, rootRef: this.root,
+      openInfo: e => { const t = e.currentTarget, f = this.root.current, fr = f.getBoundingClientRect(), sc = fr.width / f.offsetWidth || 1, fe = t.closest('[data-screen-label]') || f, b = fe.getBoundingClientRect(), W = b.width / sc, H = b.height / sc, cl = (v, lo, hi) => Math.min(Math.max(v, lo), hi); this.setState({ open: true, mTop: (b.top - fr.top) / sc, mLeft: (b.left - fr.left) / sc, mW: W, mH: H, mCx: cl((window.innerWidth / 2 - b.left) / sc, Math.min(270, W / 2), Math.max(W / 2, W - 270)), mCy: cl((window.innerHeight / 2 - b.top) / sc, Math.min(160, H / 2), Math.max(H / 2, H - 160)) }); },
+      closeModal: () => this.setState({ open: false }), stop: e => e.stopPropagation(),
+      toggleCheck: () => this.props.onToggle ? this.props.onToggle() : this.setState({ local: !checked })
+    };
+  }
+}
+</script>
+</body>
+</html>

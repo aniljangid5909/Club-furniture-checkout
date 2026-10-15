@@ -1,0 +1,11 @@
+{
+  "name": "why-buy-from-us",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Why Buy From Us card (rating + reviews) — purchase.checkout.block.render",
+  "dependencies": {
+    "@shopify/ui-extensions": "~2026.7.0",
+    "preact": "^10.20.0",
+    "@preact/signals": "^2.0.0"
+  }
+}

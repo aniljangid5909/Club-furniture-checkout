@@ -1,0 +1,37 @@
+api_version = "2026-07"
+
+[[extensions]]
+type = "ui_extension"
+name = "Payment reassurance + Affirm"
+handle = "payment-reassurance"
+uid = "ebee0c59-e9f6-4042-9a45-581855d84062"
+
+  [[extensions.targeting]]
+  target = "purchase.checkout.payment-method-list.render-before"
+  module = "./src/PaymentReassurance.tsx"
+
+  [extensions.settings]
+
+    [[extensions.settings.fields]]
+    key = "financing_months"
+    type = "number_integer"
+    name = "Affirm financing months"
+    description = "Months used for the Affirm estimate. Default 36."
+
+    [[extensions.settings.fields]]
+    key = "financing_apr"
+    type = "number_decimal"
+    name = "Affirm APR (percent)"
+    description = "Annual percentage rate for the estimate. 0 means 0% (total divided by months). Default 0."
+
+    [[extensions.settings.fields]]
+    key = "affirm_min_total"
+    type = "number_decimal"
+    name = "Affirm minimum order total"
+    description = "Hide the whole Affirm box when the order total is below this amount. Default 50."
+
+    [[extensions.settings.fields]]
+    key = "affirm_legal_text"
+    type = "multi_line_text_field"
+    name = "Affirm legal disclosure"
+    description = "Compliance-approved Affirm legal text shown under the estimate. Keep as a setting so it can change without a code release."

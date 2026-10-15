@@ -1,0 +1,59 @@
+# ============================================================================
+# CLUB FURNITURE — Checkout Branding mutation (DRAFT profile only)
+# Run in the Shopify GraphiQL App (Admin GraphQL). Sets font (Open Sans), warm
+# colours (grey → design), green button, 6px corners, selected-option fill, header.
+#
+# DRAFT profile: "One-page checkout Redesign" = gid://shopify/CheckoutProfile/2817589297
+# LIVE profile (DO NOT TOUCH): "One-page checkout test" = 2745204785 (isPublished:true)
+#
+# This is the ALL-IN-ONE inline version (no query variables needed). Paste the whole
+# mutation into the main query editor and Run. checkoutBrandingUpsert is scoped per
+# profile, so it CANNOT affect the live profile. userErrors must come back [].
+#
+# If a field errors by API version, remove/fix just that field — the risky ones are:
+#   typography.*.shopifyFontGroup, designSystem.cornerRadius, customizations.
+#   primaryButton.blockPadding, scheme1.control.selected, customizations.global.cornerRadius
+# ============================================================================
+
+mutation {
+  checkoutBrandingUpsert(
+    checkoutProfileId: "gid://shopify/CheckoutProfile/2817589297"
+    checkoutBrandingInput: {
+      designSystem: {
+        typography: {
+          size: { base: 14, ratio: 1.2 }
+          primary: { shopifyFontGroup: { name: "Open Sans", baseWeight: 400, boldWeight: 700 } }
+          secondary: { shopifyFontGroup: { name: "Open Sans", baseWeight: 400, boldWeight: 700 } }
+        }
+        colors: {
+          global: { accent: "#D4732A", brand: "#D4732A", success: "#55AA33" }
+          schemes: {
+            scheme1: {
+              base: { background: "#FFFFFF", text: "#1F1C18", border: "#DDD6CC", accent: "#D4732A" }
+              primaryButton: { background: "#55AA33", text: "#FFFFFF" }
+              control: { selected: { background: "#FDF5EE", border: "#D4732A" } }
+            }
+            scheme2: {
+              base: { background: "#F5F1EB", text: "#1F1C18", border: "#DDD6CC", accent: "#D4732A" }
+            }
+          }
+        }
+        cornerRadius: { base: 6 }
+      }
+      customizations: {
+        # blockPadding uses CheckoutBrandingSpacing (NONE/EXTRA_TIGHT/TIGHT/BASE/LOOSE/EXTRA_LOOSE)
+        primaryButton: { blockPadding: EXTRA_LOOSE, cornerRadius: BASE }
+        orderSummary: { colorScheme: COLOR_SCHEME2 }
+        header: { colorScheme: COLOR_SCHEME2, padding: NONE, divided: true }
+        # NOTE: customizations.global.cornerRadius only accepts NONE (would remove all
+        # radius) — omitted. The 6px radius comes from designSystem.cornerRadius.base.
+      }
+    }
+  ) {
+    checkoutBranding { designSystem { colors { global { accent } } } }
+    userErrors { field message }
+  }
+}
+
+# ---- Step 0: get the draft profile id (run this first if you don't have it) ----
+# query { checkoutProfiles(first: 25) { nodes { id name isPublished } } }
