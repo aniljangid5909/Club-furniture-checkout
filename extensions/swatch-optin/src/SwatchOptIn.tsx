@@ -66,9 +66,16 @@ function SwatchOptIn() {
           </s-clickable>
         </s-grid>
       ) : (
-        <s-button variant="tertiary" command="--show" commandFor="swatch-modal">
-          FREE Swatch Kit details
-        </s-button>
+        // native_link mode (Option B): the native (relabelled) marketing checkbox
+        // carries the swatch opt-in; this extension shows only a clean info (i) icon
+        // that opens the FREE Swatch Kit details modal.
+        <s-clickable
+          command="--show"
+          commandFor="swatch-modal"
+          accessibilityLabel="FREE Swatch Kit details"
+        >
+          <s-icon type="info" />
+        </s-clickable>
       )}
 
       {/* Close via the modal's built-in X (top-right) — no separate Close button. */}
