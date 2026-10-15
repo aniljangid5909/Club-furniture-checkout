@@ -81,14 +81,17 @@ function PaymentReassurance() {
       {/* Affirm box */}
       {showAffirm ? (
         <s-stack background="subdued" borderRadius="base" padding="base" gap="small-200">
-          <s-stack direction="inline" gap="small-200" alignItems="start">
+          {/* s-grid (auto 1fr) pins the orange card icon at the START of the first
+              line; the text wraps within the 1fr column instead of pushing the icon
+              onto its own line (which direction="inline" did on narrow mobile). */}
+          <s-grid gridTemplateColumns="auto 1fr" gap="small-200" alignItems="start">
             <s-image src={CARD_ICON} alt="" inlineSize="auto" aspectRatio="1/1" />
             <s-text>
               Or pay as low as{' '}
               <s-text type="strong">{money(monthlyPayment(total!.amount, settings?.financing_months ?? 36, settings?.financing_apr ?? 0), total!.currencyCode)}/mo</s-text>{' '}
               with Affirm. Choose Affirm below.
             </s-text>
-          </s-stack>
+          </s-grid>
           <s-text type="small" color="subdued">
             {legal}
           </s-text>

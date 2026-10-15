@@ -1,0 +1,31 @@
+api_version = "2026-07"
+
+[[extensions]]
+type = "ui_extension"
+name = "Shipping radio (demo)"
+handle = "shipping-radio"
+uid = "b7f3c1a2-4d6e-4f8a-9c1b-2e5d7a9f3c04"
+
+  [[extensions.targeting]]
+  target = "purchase.checkout.shipping-option-list.render-before"
+  module = "./src/ShippingRadio.tsx"
+
+  [extensions.settings]
+
+    [[extensions.settings.fields]]
+    key = "enabled"
+    type = "boolean"
+    name = "Show demo radio"
+    description = "Show the design-style FREE shipping radio block. NOTE: this is a VISUAL demo only — it does not control the real (native) shipping selection, and the native shipping row still renders below it. Turn OFF to hide."
+
+    [[extensions.settings.fields]]
+    key = "radio_label"
+    type = "single_line_text_field"
+    name = "Radio label"
+    description = "Text shown next to the radio. Default: 'FREE Shipping + FREE In-Home Delivery Included'."
+
+    [[extensions.settings.fields]]
+    key = "radio_price"
+    type = "single_line_text_field"
+    name = "Radio price"
+    description = "Price shown on the right. Default: 'FREE'."

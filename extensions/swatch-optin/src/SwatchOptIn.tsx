@@ -55,7 +55,7 @@ function SwatchOptIn() {
       {mode === 'extension' ? (
         // Checkbox with its visible label (toggles) + a clean info icon on the right
         // that opens the FREE Swatch Kit modal on tap. Known-working layout.
-        <s-grid gridTemplateColumns="1fr auto" gap="small-200" alignItems="start">
+        <s-grid gridTemplateColumns="1fr auto" gap="small-200" alignItems="end">
           <s-checkbox checked={checked} onChange={onToggle} label={label} />
           <s-clickable
             command="--show"
@@ -66,13 +66,14 @@ function SwatchOptIn() {
           </s-clickable>
         </s-grid>
       ) : (
-        // native_link mode (Option B): the native (relabelled) marketing checkbox
-        // carries the swatch opt-in; this extension shows only a clean info (i) icon
-        // that opens the FREE Swatch Kit details modal.
+        // native_link mode: the native (relabelled) marketing checkbox is the single
+        // swatch opt-in checkbox; this extension adds ONLY a clean (i) tooltip icon
+        // beneath it that opens the FREE Swatch Kit details modal. No second checkbox
+        // (so there's no duplicate), matching the original "start" look.
         <s-clickable
           command="--show"
           commandFor="swatch-modal"
-          accessibilityLabel="FREE Swatch Kit details"
+          accessibilityLabel="About the FREE Swatch Kit"
         >
           <s-icon type="info" />
         </s-clickable>

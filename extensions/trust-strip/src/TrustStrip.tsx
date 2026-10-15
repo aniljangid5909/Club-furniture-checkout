@@ -15,8 +15,10 @@ import {useState, useEffect} from 'preact/hooks';
 //   • NARROW (mobile, < 600px): ONE item at a time, auto-rotating every 3.5s —
 //     the design's mobile slider. The timer keeps running when hidden (harmless;
 //     no JS width signal exists to gate it).
-// The warm-beige band colour (#F5F1EB) comes from the BRANDING subdued scheme
-// (Header → Color scheme = Scheme 2); default grey until that's set.
+// The band colour matches the order-summary (right-side) surface: BRANDING sets
+// Header → Color scheme = Scheme 2 (#F5F1EB, same as the order summary), and the
+// box uses background="base" so the strip paints that exact colour — a uniform
+// super-header that matches the right side of the checkout (per client request).
 
 const ACCENT = '%23D4732A';
 const svg = (inner: string) =>
@@ -54,14 +56,14 @@ function TrustStrip() {
   }, []);
 
   const item = (it: {icon: string; text: string}) => (
-    <s-stack key={it.text} direction="inline" gap="small-200" alignItems="center">
+    <s-stack key={it.text} direction="inline" gap="small-400" alignItems="center">
       <s-image src={srcFor(it.icon)} alt="" inlineSize="auto" aspectRatio="1/1" />
       <s-text type="strong">{it.text}</s-text>
     </s-stack>
   );
 
   return (
-    <s-box background="subdued" padding="base" inlineSize="100%">
+    <s-box background="base" padding="base" inlineSize="100%">
       <s-query-container>
         {/* NARROW (mobile): one rotating item, centred */}
         <s-stack
@@ -73,11 +75,14 @@ function TrustStrip() {
           {item(ITEMS[i])}
         </s-stack>
 
-        {/* WIDE (desktop): all three, centred, wrapping if needed */}
+        {/* WIDE (desktop): all three, centred, wrapping if needed. Inline gap
+            large-400 puts wide, generous space BETWEEN the three items — much larger
+            than the small-400 icon→text gap inside each item, so the groups read as
+            clearly distinct (SSL · Shipping · Guarantee). */}
         <s-stack
           display={`@container (inline-size > ${BP}px) auto, none`}
           direction="inline"
-          gap="base small-300"
+          gap="large-400 small-300"
           alignItems="center"
           justifyContent="center"
         >
