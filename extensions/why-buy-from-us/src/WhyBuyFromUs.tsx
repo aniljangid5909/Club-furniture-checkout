@@ -109,16 +109,6 @@ function WhyBuyFromUs() {
           <s-icon type="chevron-right" />
         </s-button>
       </s-stack>
-
-      <s-divider />
-
-      {/* Trust Guard line */}
-      <s-stack direction="inline" gap="small-200" alignItems="center">
-        <s-icon type="lock" />
-        <s-text type="small" color="subdued">
-          Secured and scanned daily by Trust Guard
-        </s-text>
-      </s-stack>
     </s-stack>
   );
 }

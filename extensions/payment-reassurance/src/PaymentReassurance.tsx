@@ -1,7 +1,7 @@
 import '@shopify/ui-extensions/preact';
 import {render} from 'preact';
 
-// §3.4 Affirm box — purchase.checkout.payment-method-list.render-before
+// §3.4 Payment paragraph + Affirm box — purchase.checkout.payment-method-list.render-before
 // Sits under the native payment heading and paragraph. No second heading.
 // The reassurance line and its "Secure Payment" modal were removed: the restored payment
 // paragraph covers them (Jeff, Figma #197/#198/#200, 2 Nov 2026).
@@ -14,6 +14,13 @@ import {render} from 'preact';
 
 const CARD_ICON =
   "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23D4732A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='5' width='20' height='14' rx='2'/><path d='M2 10h20'/></svg>";
+
+// Rendered here rather than as Shopify's built-in payment notice, which is grey and sits
+// tighter under the heading than the shipping paragraph (Jeff, 3 Nov 2026). The built-in
+// notice (card_security_notice in the theme language file) must stay a single space:
+// an empty value shows an error on the page, and removing it brings back Shopify's default.
+const PAYMENT_PARAGRAPH =
+  'Rest assured, your credit card and personal information are 100% encrypted and SSL secure.  Your credit card will not be charged until your order is ready to ship (we only "authorize" the credit card when you checkout today).  With secure checkout and exceptional service from start to finish, you\'re just moments away from making your home more luxurious, comfortable and relaxing!';
 
 const DEFAULT_LEGAL =
   'Rates from 0–36% APR. Payment options through Affirm are subject to eligibility, may not be available in all states, and require a down payment. Affirm Loan Services, LLC, NMLS ID 1883174. affirm.com/licenses';
@@ -51,6 +58,8 @@ function PaymentReassurance() {
 
   return (
     <s-stack gap="base">
+      <s-text>{PAYMENT_PARAGRAPH}</s-text>
+
       {/* Affirm box */}
       {showAffirm ? (
         <s-stack background="subdued" borderRadius="base" padding="base" gap="small-200">

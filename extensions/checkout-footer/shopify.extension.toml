@@ -2,7 +2,7 @@ api_version = "2026-07"
 
 [[extensions]]
 type = "ui_extension"
-name = "Checkout footer (Trust Guard + help)"
+name = "Checkout footer (help)"
 handle = "checkout-footer"
 uid = "eb1d0024-6c18-428c-99fe-6305fc7900a2"
 

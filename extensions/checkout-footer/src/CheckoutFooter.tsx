@@ -1,21 +1,15 @@
 import '@shopify/ui-extensions/preact';
 import {render} from 'preact';
 
-// §3.6 + §3.7 footer — Target: purchase.checkout.footer.render-after
+// §3.7 footer — Target: purchase.checkout.footer.render-after
 //
 // Matches the UPDATED approved design's bottom section, in order:
-//   (native policy links, incl. "Contact")  →  Trust Guard banner  →  help line
-// footer.render-after renders below the native policy links, which is exactly
-// where the design places the Trust Guard banner (NOT above the pay button).
+//   (native policy links, incl. "Contact")  →  help line
+// The Trust Guard banner moved to the order summary (Jeff, 3 Nov 2026).
 //
 // New design (Oct 2026 revision): help line has NO "· Contact Us" mailto link
 // (just phone + hours), the tagline is REMOVED (show_tagline now defaults OFF),
 // and the native "Contact" policy link is KEPT (that's native, not this extension).
-
-const BANNER_SRC =
-  'https://cdn.shopify.com/s/files/1/1971/0317/files/trustguard-1.svg?v=1723493776';
-const BANNER_ALT =
-  'Trust Guard Secured: This Website is Scanned Daily for your Protection';
 
 // §3.7 help-line phone icon — the design's subdued (#6B665E) phone glyph, as an
 // <s-image> SVG at the START of the help line (a flex row: icon + text).
@@ -30,17 +24,6 @@ function CheckoutFooter() {
 
   return (
     <s-stack gap="base">
-      {/* §3.6 Trust Guard banner. aspectRatio MUST match the SVG viewBox
-          (0 0 327 42.65 ≈ 7.66:1); without it s-image defaults to a square and
-          reserves a huge block of empty vertical space. */}
-      <s-image
-        src={BANNER_SRC}
-        alt={BANNER_ALT}
-        inlineSize="fill"
-        aspectRatio="327/42.65"
-        objectFit="contain"
-      />
-
       {/* §3.7.1 Help line — s-grid (auto 1fr) keeps the phone icon pinned at the
           start of the FIRST line while the text wraps within the 1fr column.
           New design: phone + number + hours only (no "Contact Us" mailto). */}
