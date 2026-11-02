@@ -18,14 +18,14 @@ const ALT =
 
 function HeaderBanner() {
   return (
-    <s-stack>
+    <s-query-container>
       <s-stack display={`@container (inline-size > ${BP}px) none, auto`} alignItems="center">
         <s-image src={MOBILE_IMAGE} alt={ALT} inlineSize="auto" />
       </s-stack>
       <s-stack display={`@container (inline-size > ${BP}px) auto, none`}>
         <s-image src={DESKTOP_IMAGE} alt={ALT} inlineSize="auto" />
       </s-stack>
-    </s-stack>
+    </s-query-container>
   );
 }
 
