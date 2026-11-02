@@ -56,7 +56,7 @@ function TrustStrip() {
   }, []);
 
   const item = (it: {icon: string; text: string}) => (
-    <s-stack key={it.text} direction="inline" gap="small-400" alignItems="center">
+    <s-stack key={it.text} direction="inline" gap="small-300" alignItems="center">
       <s-image src={srcFor(it.icon)} alt="" inlineSize="auto" aspectRatio="1/1" />
       <s-text type="strong">{it.text}</s-text>
     </s-stack>
@@ -76,13 +76,13 @@ function TrustStrip() {
         </s-stack>
 
         {/* WIDE (desktop): all three, centred, wrapping if needed. Inline gap
-            large-400 puts wide, generous space BETWEEN the three items — much larger
-            than the small-400 icon→text gap inside each item, so the groups read as
+            large-300 puts wide, generous space BETWEEN the three items — much larger
+            than the small-300 icon→text gap inside each item, so the groups read as
             clearly distinct (SSL · Shipping · Guarantee). */}
         <s-stack
           display={`@container (inline-size > ${BP}px) auto, none`}
           direction="inline"
-          gap="large-400 small-300"
+          gap="small-300 large-300"
           alignItems="center"
           justifyContent="center"
         >

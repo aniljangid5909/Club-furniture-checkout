@@ -5,7 +5,7 @@ import {useEffect} from 'preact/hooks';
 // §3.2 Swatch-kit opt-in — purchase.checkout.contact.render-after
 //
 // Two modes via the `swatch_mode` setting (default native_link):
-//   • extension   : checkbox checked by default + "FREE Swatch Kit" modal, and it
+//   • extension   : checkbox checked by default, and it
 //                   records the choice as order attribute
 //                   "Swatch Kit Requested" = Yes / No (writes Yes on first render).
 //   • native_link : only a "FREE Swatch Kit details" link that opens the same modal,
@@ -29,7 +29,7 @@ function SwatchOptIn() {
     checkbox_label?: string;
     modal_body?: string;
   };
-  const mode = settings?.swatch_mode === 'extension' ? 'extension' : 'native_link';
+  const mode = settings?.swatch_mode === 'native_link' ? 'native_link' : 'extension';
   // Editable in the extension settings; fall back to the design's wording.
   const label = settings?.checkbox_label || CHECKBOX_LABEL;
   const modalBody = settings?.modal_body || MODAL_BODY;
@@ -53,18 +53,9 @@ function SwatchOptIn() {
   return (
     <s-stack gap="small-200">
       {mode === 'extension' ? (
-        // Checkbox with its visible label (toggles) + a clean info icon on the right
-        // that opens the FREE Swatch Kit modal on tap. Known-working layout.
-        <s-grid gridTemplateColumns="1fr auto" gap="small-200" alignItems="end">
-          <s-checkbox checked={checked} onChange={onToggle} label={label} />
-          <s-clickable
-            command="--show"
-            commandFor="swatch-modal"
-            accessibilityLabel="About the swatch kit"
-          >
-            <s-icon type="info" />
-          </s-clickable>
-        </s-grid>
+        // Checkbox with its visible label (toggles). No info icon: the full wording
+        // is in the label (Jeff, Figma #196, 2 Nov 2026).
+        <s-checkbox checked={checked} onChange={onToggle} label={label} />
       ) : (
         // native_link mode: the native (relabelled) marketing checkbox is the single
         // swatch opt-in checkbox; this extension adds ONLY a clean (i) tooltip icon
@@ -80,9 +71,11 @@ function SwatchOptIn() {
       )}
 
       {/* Close via the modal's built-in X (top-right) — no separate Close button. */}
-      <s-modal id="swatch-modal" heading="FREE Swatch Kit">
-        <s-paragraph>{modalBody}</s-paragraph>
-      </s-modal>
+      {mode === 'extension' ? null : (
+        <s-modal id="swatch-modal" heading="FREE Swatch Kit">
+          <s-paragraph>{modalBody}</s-paragraph>
+        </s-modal>
+      )}
     </s-stack>
   );
 }

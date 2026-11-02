@@ -50,8 +50,7 @@ function CheckoutFooter() {
             desktop and bigger phones; on narrow phones the text is too long to fit
             one line and wraps (the spec allows wrapping on mobile). */}
         <s-text type="small" color="subdued">
-          Questions? Call Us, Toll Free:{' '}
-          <s-link href="tel:18883788383">1-888-378-8383</s-link> · M-F 9AM - 5PM EST
+          Questions? Call Us, Toll Free: 1-888-378-8383 · M-F 9AM - 5PM EST
         </s-text>
       </s-grid>
 

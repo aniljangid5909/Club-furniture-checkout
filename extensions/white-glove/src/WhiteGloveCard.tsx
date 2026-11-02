@@ -11,7 +11,6 @@ import {render} from 'preact';
 //   clock  → "A convenient delivery appointment"
 //   marker → "Furniture placed in the room of your choice"
 //   box    → "Full setup and packaging removal"
-//   truck  → "Small items ship FREE via FedEx or UPS"
 // Default source = inline data-URI SVG (no upload). If the sandbox blocks data
 // URIs, see the trust-strip extension's icon_*_url settings pattern.
 
@@ -23,14 +22,12 @@ const ICONS: Record<string, string> = {
   clock: svg(`<circle cx='12' cy='12' r='10'/><path d='M12 6v6l4 2'/>`),
   marker: svg(`<path d='M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z'/><circle cx='12' cy='10' r='2.5'/>`),
   box: svg(`<path d='M21 8 12 3 3 8v8l9 5 9-5z'/><path d='m3 8 9 5 9-5M12 13v8'/>`),
-  truck: svg(`<path d='M1 5h14v11H1zM15 9h4l4 4v3h-8z'/><circle cx='5.5' cy='18.5' r='2'/><circle cx='18.5' cy='18.5' r='2'/>`),
 };
 
 const ROWS: {icon: string; text: string}[] = [
   {icon: 'clock', text: 'A convenient delivery appointment'},
   {icon: 'marker', text: 'Furniture placed in the room of your choice'},
   {icon: 'box', text: 'Full setup and packaging removal'},
-  {icon: 'truck', text: 'Small items ship FREE via FedEx or UPS'},
 ];
 
 function WhiteGloveCard() {

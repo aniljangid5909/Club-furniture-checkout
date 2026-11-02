@@ -46,7 +46,7 @@ function TrustActions() {
   }, []);
 
   const item = (it: {icon: string; text: string}) => (
-    <s-stack key={it.text} direction="inline" gap="small-200" alignItems="center">
+    <s-stack key={it.text} direction="inline" gap="small-300" alignItems="center">
       <s-image src={srcFor(it.icon)} alt="" inlineSize="auto" aspectRatio="1/1" />
       <s-text type="strong">{it.text}</s-text>
     </s-stack>
@@ -68,7 +68,7 @@ function TrustActions() {
       <s-stack
         display={`@container (inline-size > ${BP}px) auto, none`}
         direction="inline"
-        gap="base small-300"
+        gap="small-300 large-100"
         alignItems="center"
         justifyContent="center"
       >
