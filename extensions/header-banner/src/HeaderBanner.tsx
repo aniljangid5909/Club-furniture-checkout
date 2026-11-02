@@ -10,8 +10,11 @@ import {render} from 'preact';
 
 const BP = 600; // px
 
-const DESKTOP_IMAGE = 'https://cdn.shopify.com/s/files/1/1971/0317/files/cf-30day-banner-desktop.png';
-const MOBILE_IMAGE = 'https://cdn.shopify.com/s/files/1/1971/0317/files/cf-30day-banner-mobile.png';
+// Sharper artwork from Anil (3 Nov 2026). width= asks Shopify's CDN for a smaller copy, about 2× display size.
+const DESKTOP_IMAGE =
+  'https://cdn.shopify.com/s/files/1/1971/0317/files/ChatGPT_Image_Oct_1_2026_08_25_48_AM.png?v=1790823448&width=1200';
+const MOBILE_IMAGE =
+  'https://cdn.shopify.com/s/files/1/1971/0317/files/ChatGPT_Image_Oct_1_2026_08_33_16_AM.png?v=1790823866&width=800';
 
 // Same artwork the old block opened on tap: the full guarantee and terms the FREE* points to.
 const POPUP_IMAGE = 'https://cdn.shopify.com/s/files/1/1971/0317/files/cf-30day-guarantee-popup.jpg';
