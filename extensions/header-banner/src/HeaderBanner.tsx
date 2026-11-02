@@ -34,7 +34,8 @@ function HeaderBanner() {
           <s-stack display={`@container (inline-size > ${BP}px) none, auto`} alignItems="center">
             <s-image src={MOBILE_IMAGE} alt={ALT} inlineSize="auto" />
           </s-stack>
-          <s-stack display={`@container (inline-size > ${BP}px) auto, none`}>
+          {/* Capped so it stays close to the old banner's size instead of filling the header. */}
+          <s-stack display={`@container (inline-size > ${BP}px) auto, none`} maxInlineSize="600px">
             <s-image src={DESKTOP_IMAGE} alt={ALT} inlineSize="auto" />
           </s-stack>
         </s-query-container>
