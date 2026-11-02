@@ -1,0 +1,11 @@
+api_version = "2026-07"
+
+[[extensions]]
+type = "ui_extension"
+name = "30-day header banner"
+handle = "header-banner"
+uid = "ee659536-0b03-4b39-9a81-2c52de61156d"
+
+  [[extensions.targeting]]
+  target = "purchase.checkout.header.render-after"
+  module = "./src/HeaderBanner.tsx"
